@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FED89C8-F4C3-4179-A982-14136BC6B0A2}|CapaAccesoDatos\\CapaAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capaaccesodatos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FED89C8-F4C3-4179-A982-14136BC6B0A2}|CapaAccesoDatos\\CapaAccesoDatos.csproj|solutionrelative:capaaccesodatos\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406B0620-E3ED-4779-AAEE-C833DEF56AD2}|CapaEntidades\\CapaEntidades.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capaentidades\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406B0620-E3ED-4779-AAEE-C833DEF56AD2}|CapaEntidades\\CapaEntidades.csproj|solutionrelative:capaentidades\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16C21CA-919C-4870-B3DD-8915FC55ED89}|CapaNegocio\\CapaNegocio.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capanegocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A16C21CA-919C-4870-B3DD-8915FC55ED89}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\Class1.cs",
+              "RelativeDocumentMoniker": "CapaAccesoDatos\\Class1.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\Class1.cs",
+              "RelativeToolTip": "CapaAccesoDatos\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:11:32.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\Class1.cs",
+              "RelativeDocumentMoniker": "CapaEntidades\\Class1.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\Class1.cs",
+              "RelativeToolTip": "CapaEntidades\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:10:41.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\Class1.cs",
+              "RelativeDocumentMoniker": "CapaNegocio\\Class1.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\Class1.cs",
+              "RelativeToolTip": "CapaNegocio\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:10:08.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Login.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:06:04.716Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

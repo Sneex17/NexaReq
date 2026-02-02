@@ -1,0 +1,16 @@
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\bin\Debug\net9.0\CapaAccesoDatos.deps.json
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\bin\Debug\net9.0\CapaAccesoDatos.dll
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\bin\Debug\net9.0\CapaAccesoDatos.pdb
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\bin\Debug\net9.0\CapaEntidades.dll
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\bin\Debug\net9.0\CapaEntidades.pdb
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.csproj.AssemblyReference.cache
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.AssemblyInfoInputs.cache
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.AssemblyInfo.cs
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.sourcelink.json
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAcce.1AD5E18C.Up2Date
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.dll
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\refint\CapaAccesoDatos.dll
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\CapaAccesoDatos.pdb
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaAccesoDatos\obj\Debug\net9.0\ref\CapaAccesoDatos.dll

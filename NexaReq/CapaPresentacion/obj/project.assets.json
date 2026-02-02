@@ -1,0 +1,146 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0-windows7.0": {
+      "CapaAccesoDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CapaEntidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CapaAccesoDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaAccesoDatos.dll": {}
+        }
+      },
+      "CapaEntidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CapaEntidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaEntidades.dll": {}
+        }
+      },
+      "CapaNegocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CapaAccesoDatos": "1.0.0",
+          "CapaEntidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CapaNegocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaNegocio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CapaAccesoDatos/1.0.0": {
+      "type": "project",
+      "path": "../CapaAccesoDatos/CapaAccesoDatos.csproj",
+      "msbuildProject": "../CapaAccesoDatos/CapaAccesoDatos.csproj"
+    },
+    "CapaEntidades/1.0.0": {
+      "type": "project",
+      "path": "../CapaEntidades/CapaEntidades.csproj",
+      "msbuildProject": "../CapaEntidades/CapaEntidades.csproj"
+    },
+    "CapaNegocio/1.0.0": {
+      "type": "project",
+      "path": "../CapaNegocio/CapaNegocio.csproj",
+      "msbuildProject": "../CapaNegocio/CapaNegocio.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0-windows7.0": [
+      "CapaEntidades >= 1.0.0",
+      "CapaNegocio >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\xrami\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\CapaPresentacion.csproj",
+      "projectName": "CapaPresentacion",
+      "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\CapaPresentacion.csproj",
+      "packagesPath": "C:\\Users\\xrami\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\xrami\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "projectReferences": {
+            "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
+              "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj"
+            },
+            "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj": {
+              "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
