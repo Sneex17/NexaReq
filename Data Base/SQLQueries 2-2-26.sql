@@ -52,3 +52,37 @@ GO
 select * from Departamentos
 select * from Cargos
 select * from Empleados
+
+-- Tablas de usuario y roles
+create table Roles(
+IdRol int primary key identity,
+Rol varchar(30) not null,
+)
+
+create table Usuarios(
+IdUsuario int primary key identity,
+IdEmpleado int not null,
+Username varchar(50) not null,
+PasswordHash varchar(256) not null,
+IdRol int not null,
+FechaCreacion date not null,
+UltimoAccceso date not null
+
+constraint FK_UsarioEmpleado foreign key (IdEmpleado) references Empleados(IdEmpleado),
+constraint FK_UsuarioRol foreign key (IdRol) references Roles(IdRol)
+)
+GO
+
+select * from Roles
+select * from Usuarios
+select * from Empleados
+insert into Roles(Rol) values 
+('Solicitante'),
+('Aprobador')
+GO
+insert into Usuarios(IdEmpleado, Username, PasswordHash, IdRol, FechaCreacion, UltimoAccceso) values
+(2, 'abi','sa',1, GETDATE(), GETDATE()),
+(3, 'luz','as',2, GETDATE(), GETDATE())
+GO
+
+
