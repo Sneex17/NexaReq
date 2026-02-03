@@ -85,4 +85,23 @@ insert into Usuarios(IdEmpleado, Username, PasswordHash, IdRol, FechaCreacion, U
 (3, 'luz','as',2, GETDATE(), GETDATE())
 GO
 
+update Usuarios set PasswordHash =
+'4cf6829aa93728e8f3c97df913fb1bfa95fe5810e2933a05943f8312a98d9cf2'
+where IdUsuario = 1
 
+update Usuarios set PasswordHash =
+'f4bf9f7fcbedaba0392f108c59d8f4a38b3838efb64877380171b54475c2ade8'
+where IdUsuario = 2
+
+-- procedimientos de usuarios
+
+alter proc pa_ValidacioUsuario
+(
+@Username varchar(50),
+@PasswordHash varchar(256)
+)
+as
+select COUNT(1) from Usuarios where Username = @Username and PasswordHash = @PasswordHash
+
+select * from Departamentos
+select * from Empleados
