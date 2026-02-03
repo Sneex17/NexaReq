@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
+            BuBuscarEmpleados = new Button();
+            textbDepartamento = new TextBox();
             label4 = new Label();
-            button1 = new Button();
+            textbNombre = new TextBox();
+            label3 = new Label();
+            textbIdEmpleado = new TextBox();
+            label2 = new Label();
             groupBox2 = new GroupBox();
-            button2 = new Button();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            textBox5 = new TextBox();
-            label6 = new Label();
-            textBox6 = new TextBox();
-            label7 = new Label();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            textBox8 = new TextBox();
+            textbCantidad = new TextBox();
             label9 = new Label();
+            textbITBIS = new TextBox();
+            label8 = new Label();
+            BuBuscarProducto = new Button();
+            textbPrecioUnit = new TextBox();
+            label5 = new Label();
+            textbProducto = new TextBox();
+            label6 = new Label();
+            textbIdProducto = new TextBox();
+            label7 = new Label();
             dataGridView1 = new DataGridView();
             label10 = new Label();
             button3 = new Button();
@@ -61,6 +61,11 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
+            // panelHeader
+            // 
+            panelHeader.Margin = new Padding(3, 2, 3, 2);
+            panelHeader.Size = new Size(1017, 65);
+            // 
             // panelContext
             // 
             panelContext.Controls.Add(textBox9);
@@ -70,21 +75,30 @@
             panelContext.Controls.Add(dataGridView1);
             panelContext.Controls.Add(groupBox2);
             panelContext.Controls.Add(groupBox1);
+            panelContext.Margin = new Padding(3, 2, 3, 2);
+            panelContext.Size = new Size(1017, 699);
             // 
             // label1
             // 
+            label1.Location = new Point(99, 17);
             label1.Size = new Size(232, 31);
             label1.Text = "Solicitud de Compras";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(36, 6);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Size = new Size(58, 38);
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.ControlLight;
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(BuBuscarEmpleados);
+            groupBox1.Controls.Add(textbDepartamento);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textbNombre);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textbIdEmpleado);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 11F);
             groupBox1.Location = new Point(20, 35);
@@ -94,50 +108,24 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del Empleado";
             // 
-            // label2
+            // BuBuscarEmpleados
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(20, 29);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Id Empleado";
+            BuBuscarEmpleados.Location = new Point(760, 24);
+            BuBuscarEmpleados.Name = "BuBuscarEmpleados";
+            BuBuscarEmpleados.Size = new Size(75, 47);
+            BuBuscarEmpleados.TabIndex = 6;
+            BuBuscarEmpleados.Text = "Buscar";
+            BuBuscarEmpleados.UseVisualStyleBackColor = true;
+            BuBuscarEmpleados.Click += BuBuscarEmpleados_Click;
             // 
-            // textBox1
+            // textbDepartamento
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(20, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(90, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(127, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(170, 27);
-            textBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(127, 29);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Nombre";
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(318, 52);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(140, 27);
-            textBox3.TabIndex = 5;
+            textbDepartamento.BorderStyle = BorderStyle.FixedSingle;
+            textbDepartamento.Enabled = false;
+            textbDepartamento.Location = new Point(318, 52);
+            textbDepartamento.Name = "textbDepartamento";
+            textbDepartamento.Size = new Size(140, 27);
+            textbDepartamento.TabIndex = 5;
             // 
             // label4
             // 
@@ -148,28 +136,55 @@
             label4.TabIndex = 4;
             label4.Text = "Departamento";
             // 
-            // button1
+            // textbNombre
             // 
-            button1.Location = new Point(760, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 47);
-            button1.TabIndex = 6;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
+            textbNombre.BorderStyle = BorderStyle.FixedSingle;
+            textbNombre.Enabled = false;
+            textbNombre.Location = new Point(127, 52);
+            textbNombre.Name = "textbNombre";
+            textbNombre.Size = new Size(170, 27);
+            textbNombre.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(127, 29);
+            label3.Name = "label3";
+            label3.Size = new Size(64, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Nombre";
+            // 
+            // textbIdEmpleado
+            // 
+            textbIdEmpleado.BorderStyle = BorderStyle.FixedSingle;
+            textbIdEmpleado.Enabled = false;
+            textbIdEmpleado.Location = new Point(20, 52);
+            textbIdEmpleado.Name = "textbIdEmpleado";
+            textbIdEmpleado.Size = new Size(90, 27);
+            textbIdEmpleado.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(20, 29);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Id Empleado";
             // 
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.ControlLight;
-            groupBox2.Controls.Add(textBox8);
+            groupBox2.Controls.Add(textbCantidad);
             groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(textBox7);
+            groupBox2.Controls.Add(textbITBIS);
             groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(BuBuscarProducto);
+            groupBox2.Controls.Add(textbPrecioUnit);
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(textbProducto);
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(textBox6);
+            groupBox2.Controls.Add(textbIdProducto);
             groupBox2.Controls.Add(label7);
             groupBox2.Font = new Font("Segoe UI", 11F);
             groupBox2.Location = new Point(20, 136);
@@ -179,94 +194,13 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos de los Productos";
             // 
-            // button2
+            // textbCantidad
             // 
-            button2.Location = new Point(760, 24);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 47);
-            button2.TabIndex = 6;
-            button2.Text = "Buscar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(315, 54);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(106, 27);
-            textBox4.TabIndex = 5;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(315, 31);
-            label5.Name = "label5";
-            label5.Size = new Size(50, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Precio";
-            // 
-            // textBox5
-            // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Enabled = false;
-            textBox5.Location = new Point(124, 54);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(170, 27);
-            textBox5.TabIndex = 3;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(124, 31);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 20);
-            label6.TabIndex = 2;
-            label6.Text = "Nombre";
-            // 
-            // textBox6
-            // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Enabled = false;
-            textBox6.Location = new Point(17, 54);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(90, 27);
-            textBox6.TabIndex = 1;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(17, 31);
-            label7.Name = "label7";
-            label7.Size = new Size(86, 20);
-            label7.TabIndex = 0;
-            label7.Text = "Id Producto";
-            // 
-            // textBox7
-            // 
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Enabled = false;
-            textBox7.Location = new Point(441, 54);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(106, 27);
-            textBox7.TabIndex = 8;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(441, 31);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 20);
-            label8.TabIndex = 7;
-            label8.Text = "ITBIS";
-            // 
-            // textBox8
-            // 
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(570, 54);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(106, 27);
-            textBox8.TabIndex = 10;
+            textbCantidad.BorderStyle = BorderStyle.FixedSingle;
+            textbCantidad.Location = new Point(570, 54);
+            textbCantidad.Name = "textbCantidad";
+            textbCantidad.Size = new Size(106, 27);
+            textbCantidad.TabIndex = 10;
             // 
             // label9
             // 
@@ -277,11 +211,94 @@
             label9.TabIndex = 9;
             label9.Text = "Cantidad";
             // 
+            // textbITBIS
+            // 
+            textbITBIS.BorderStyle = BorderStyle.FixedSingle;
+            textbITBIS.Enabled = false;
+            textbITBIS.Location = new Point(441, 54);
+            textbITBIS.Name = "textbITBIS";
+            textbITBIS.Size = new Size(106, 27);
+            textbITBIS.TabIndex = 8;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(441, 31);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 20);
+            label8.TabIndex = 7;
+            label8.Text = "ITBIS";
+            // 
+            // BuBuscarProducto
+            // 
+            BuBuscarProducto.Location = new Point(760, 24);
+            BuBuscarProducto.Name = "BuBuscarProducto";
+            BuBuscarProducto.Size = new Size(75, 47);
+            BuBuscarProducto.TabIndex = 6;
+            BuBuscarProducto.Text = "Buscar";
+            BuBuscarProducto.UseVisualStyleBackColor = true;
+            BuBuscarProducto.Click += BuBuscarProducto_Click;
+            // 
+            // textbPrecioUnit
+            // 
+            textbPrecioUnit.BorderStyle = BorderStyle.FixedSingle;
+            textbPrecioUnit.Enabled = false;
+            textbPrecioUnit.Location = new Point(315, 54);
+            textbPrecioUnit.Name = "textbPrecioUnit";
+            textbPrecioUnit.Size = new Size(106, 27);
+            textbPrecioUnit.TabIndex = 5;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(315, 31);
+            label5.Name = "label5";
+            label5.Size = new Size(50, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Precio";
+            // 
+            // textbProducto
+            // 
+            textbProducto.BorderStyle = BorderStyle.FixedSingle;
+            textbProducto.Enabled = false;
+            textbProducto.Location = new Point(124, 54);
+            textbProducto.Name = "textbProducto";
+            textbProducto.Size = new Size(170, 27);
+            textbProducto.TabIndex = 3;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(124, 31);
+            label6.Name = "label6";
+            label6.Size = new Size(64, 20);
+            label6.TabIndex = 2;
+            label6.Text = "Nombre";
+            // 
+            // textbIdProducto
+            // 
+            textbIdProducto.BorderStyle = BorderStyle.FixedSingle;
+            textbIdProducto.Enabled = false;
+            textbIdProducto.Location = new Point(17, 54);
+            textbIdProducto.Name = "textbIdProducto";
+            textbIdProducto.Size = new Size(90, 27);
+            textbIdProducto.TabIndex = 1;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(17, 31);
+            label7.Name = "label7";
+            label7.Size = new Size(86, 20);
+            label7.TabIndex = 0;
+            label7.Text = "Id Producto";
+            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(20, 283);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(850, 195);
             dataGridView1.TabIndex = 8;
             // 
@@ -329,7 +346,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(890, 661);
+            ClientSize = new Size(1017, 764);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(1017, 881);
+            MinimumSize = new Size(1017, 764);
             Name = "FormSolicitud";
             Text = "FormSolicitud";
             panelHeader.ResumeLayout(false);
@@ -348,27 +368,27 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox2;
+        private TextBox textbNombre;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox textbIdEmpleado;
         private Label label2;
         private GroupBox groupBox2;
-        private Button button2;
-        private TextBox textBox4;
+        private Button BuBuscarProducto;
+        private TextBox textbPrecioUnit;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox textbProducto;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox textbIdProducto;
         private Label label7;
-        private Button button1;
-        private TextBox textBox3;
+        private Button BuBuscarEmpleados;
+        private TextBox textbDepartamento;
         private Label label4;
-        private TextBox textBox7;
+        private TextBox textbITBIS;
         private Label label8;
         private Button button3;
         private Label label10;
         private DataGridView dataGridView1;
-        private TextBox textBox8;
+        private TextBox textbCantidad;
         private Label label9;
         private TextBox textBox9;
         private Label label11;

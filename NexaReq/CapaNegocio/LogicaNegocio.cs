@@ -3,6 +3,7 @@ using CapaAccesoDatos.Controller;
 using CapaEntidades.EntidadesA;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,16 @@ namespace CapaNegocio
             {
                 return false;
             }
+        }
+
+        public static DataTable TablaEmpleados()
+        {
+            return DatosEmpleados.ListaEmpleados();
+        }
+
+        public static DataTable TablaProductos()
+        {
+            return DatosProductos.ListaProductos();
         }
     }
 }
