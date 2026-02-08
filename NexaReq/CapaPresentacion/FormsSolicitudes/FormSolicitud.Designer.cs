@@ -37,6 +37,9 @@
             textbIdEmpleado = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            BuAgregar = new Button();
+            textbSubTotal = new TextBox();
+            label12 = new Label();
             textbCantidad = new TextBox();
             label9 = new Label();
             textbITBIS = new TextBox();
@@ -48,17 +51,27 @@
             label6 = new Label();
             textbIdProducto = new TextBox();
             label7 = new Label();
-            dataGridView1 = new DataGridView();
+            dataViewDetalleItems = new DataGridView();
+            IdProducto = new DataGridViewTextBoxColumn();
+            Producto = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            PrecioCantidad = new DataGridViewTextBoxColumn();
+            ITBIS = new DataGridViewTextBoxColumn();
+            SubTotal = new DataGridViewTextBoxColumn();
+            Opcion = new DataGridViewButtonColumn();
             label10 = new Label();
             button3 = new Button();
-            textBox9 = new TextBox();
+            textbTotal = new TextBox();
             label11 = new Label();
+            cbxSeleccionITBIS = new ComboBox();
+            BuAplicarItbis = new Button();
             panelHeader.SuspendLayout();
             panelContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataViewDetalleItems).BeginInit();
             SuspendLayout();
             // 
             // panelHeader
@@ -68,11 +81,11 @@
             // 
             // panelContext
             // 
-            panelContext.Controls.Add(textBox9);
+            panelContext.Controls.Add(textbTotal);
             panelContext.Controls.Add(label11);
             panelContext.Controls.Add(button3);
             panelContext.Controls.Add(label10);
-            panelContext.Controls.Add(dataGridView1);
+            panelContext.Controls.Add(dataViewDetalleItems);
             panelContext.Controls.Add(groupBox2);
             panelContext.Controls.Add(groupBox1);
             panelContext.Margin = new Padding(3, 2, 3, 2);
@@ -101,7 +114,7 @@
             groupBox1.Controls.Add(textbIdEmpleado);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 11F);
-            groupBox1.Location = new Point(20, 35);
+            groupBox1.Location = new Point(20, 20);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(850, 95);
             groupBox1.TabIndex = 0;
@@ -175,6 +188,11 @@
             // groupBox2
             // 
             groupBox2.BackColor = SystemColors.ControlLight;
+            groupBox2.Controls.Add(BuAplicarItbis);
+            groupBox2.Controls.Add(cbxSeleccionITBIS);
+            groupBox2.Controls.Add(BuAgregar);
+            groupBox2.Controls.Add(textbSubTotal);
+            groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(textbCantidad);
             groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(textbITBIS);
@@ -187,25 +205,54 @@
             groupBox2.Controls.Add(textbIdProducto);
             groupBox2.Controls.Add(label7);
             groupBox2.Font = new Font("Segoe UI", 11F);
-            groupBox2.Location = new Point(20, 136);
+            groupBox2.Location = new Point(20, 121);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(850, 95);
+            groupBox2.Size = new Size(850, 137);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos de los Productos";
             // 
+            // BuAgregar
+            // 
+            BuAgregar.Location = new Point(760, 76);
+            BuAgregar.Name = "BuAgregar";
+            BuAgregar.Size = new Size(75, 47);
+            BuAgregar.TabIndex = 13;
+            BuAgregar.Text = "+";
+            BuAgregar.UseVisualStyleBackColor = true;
+            BuAgregar.Click += BuAgregar_Click;
+            // 
+            // textbSubTotal
+            // 
+            textbSubTotal.BorderStyle = BorderStyle.FixedSingle;
+            textbSubTotal.Enabled = false;
+            textbSubTotal.Location = new Point(634, 54);
+            textbSubTotal.Name = "textbSubTotal";
+            textbSubTotal.Size = new Size(91, 27);
+            textbSubTotal.TabIndex = 12;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(634, 31);
+            label12.Name = "label12";
+            label12.Size = new Size(65, 20);
+            label12.TabIndex = 11;
+            label12.Text = "Subtotal";
+            // 
             // textbCantidad
             // 
             textbCantidad.BorderStyle = BorderStyle.FixedSingle;
-            textbCantidad.Location = new Point(570, 54);
+            textbCantidad.Location = new Point(527, 54);
             textbCantidad.Name = "textbCantidad";
-            textbCantidad.Size = new Size(106, 27);
+            textbCantidad.Size = new Size(91, 27);
             textbCantidad.TabIndex = 10;
+            textbCantidad.TextChanged += textbCantidad_TextChanged;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(570, 31);
+            label9.Location = new Point(527, 31);
             label9.Name = "label9";
             label9.Size = new Size(69, 20);
             label9.TabIndex = 9;
@@ -215,15 +262,15 @@
             // 
             textbITBIS.BorderStyle = BorderStyle.FixedSingle;
             textbITBIS.Enabled = false;
-            textbITBIS.Location = new Point(441, 54);
+            textbITBIS.Location = new Point(421, 54);
             textbITBIS.Name = "textbITBIS";
-            textbITBIS.Size = new Size(106, 27);
+            textbITBIS.Size = new Size(86, 27);
             textbITBIS.TabIndex = 8;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(441, 31);
+            label8.Location = new Point(421, 31);
             label8.Name = "label8";
             label8.Size = new Size(42, 20);
             label8.TabIndex = 7;
@@ -231,7 +278,7 @@
             // 
             // BuBuscarProducto
             // 
-            BuBuscarProducto.Location = new Point(760, 24);
+            BuBuscarProducto.Location = new Point(760, 18);
             BuBuscarProducto.Name = "BuBuscarProducto";
             BuBuscarProducto.Size = new Size(75, 47);
             BuBuscarProducto.TabIndex = 6;
@@ -245,7 +292,7 @@
             textbPrecioUnit.Enabled = false;
             textbPrecioUnit.Location = new Point(315, 54);
             textbPrecioUnit.Name = "textbPrecioUnit";
-            textbPrecioUnit.Size = new Size(106, 27);
+            textbPrecioUnit.Size = new Size(90, 27);
             textbPrecioUnit.TabIndex = 5;
             // 
             // label5
@@ -293,20 +340,61 @@
             label7.TabIndex = 0;
             label7.Text = "Id Producto";
             // 
-            // dataGridView1
+            // dataViewDetalleItems
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(20, 283);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(850, 195);
-            dataGridView1.TabIndex = 8;
+            dataViewDetalleItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataViewDetalleItems.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Producto, Precio, Cantidad, PrecioCantidad, ITBIS, SubTotal, Opcion });
+            dataViewDetalleItems.Location = new Point(20, 287);
+            dataViewDetalleItems.Name = "dataViewDetalleItems";
+            dataViewDetalleItems.RowHeadersWidth = 51;
+            dataViewDetalleItems.Size = new Size(850, 195);
+            dataViewDetalleItems.TabIndex = 8;
+            // 
+            // IdProducto
+            // 
+            IdProducto.HeaderText = "IdProducto";
+            IdProducto.Name = "IdProducto";
+            // 
+            // Producto
+            // 
+            Producto.HeaderText = "Producto";
+            Producto.Name = "Producto";
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            // 
+            // PrecioCantidad
+            // 
+            PrecioCantidad.HeaderText = "PrecioCantidad";
+            PrecioCantidad.Name = "PrecioCantidad";
+            // 
+            // ITBIS
+            // 
+            ITBIS.HeaderText = "ITBIS";
+            ITBIS.Name = "ITBIS";
+            // 
+            // SubTotal
+            // 
+            SubTotal.HeaderText = "SubTotal";
+            SubTotal.Name = "SubTotal";
+            // 
+            // Opcion
+            // 
+            Opcion.HeaderText = "Opcion";
+            Opcion.Name = "Opcion";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 11F);
-            label10.Location = new Point(20, 255);
+            label10.Location = new Point(20, 259);
             label10.Name = "label10";
             label10.Size = new Size(171, 20);
             label10.TabIndex = 11;
@@ -322,15 +410,15 @@
             button3.Text = "Solicitar";
             button3.UseVisualStyleBackColor = true;
             // 
-            // textBox9
+            // textbTotal
             // 
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Enabled = false;
-            textBox9.Font = new Font("Segoe UI", 11F);
-            textBox9.Location = new Point(639, 519);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(106, 27);
-            textBox9.TabIndex = 12;
+            textbTotal.BorderStyle = BorderStyle.FixedSingle;
+            textbTotal.Enabled = false;
+            textbTotal.Font = new Font("Segoe UI", 11F);
+            textbTotal.Location = new Point(639, 519);
+            textbTotal.Name = "textbTotal";
+            textbTotal.Size = new Size(106, 27);
+            textbTotal.TabIndex = 12;
             // 
             // label11
             // 
@@ -341,6 +429,25 @@
             label11.Size = new Size(42, 20);
             label11.TabIndex = 11;
             label11.Text = "Total";
+            // 
+            // cbxSeleccionITBIS
+            // 
+            cbxSeleccionITBIS.FormattingEnabled = true;
+            cbxSeleccionITBIS.Location = new Point(16, 98);
+            cbxSeleccionITBIS.Name = "cbxSeleccionITBIS";
+            cbxSeleccionITBIS.Size = new Size(112, 28);
+            cbxSeleccionITBIS.TabIndex = 14;
+            cbxSeleccionITBIS.Text = "Elegir itbis";
+            // 
+            // BuAplicarItbis
+            // 
+            BuAplicarItbis.Location = new Point(134, 99);
+            BuAplicarItbis.Name = "BuAplicarItbis";
+            BuAplicarItbis.Size = new Size(91, 28);
+            BuAplicarItbis.TabIndex = 15;
+            BuAplicarItbis.Text = "Aplicar";
+            BuAplicarItbis.UseVisualStyleBackColor = true;
+            BuAplicarItbis.Click += BuAplicarItbis_Click;
             // 
             // FormSolicitud
             // 
@@ -361,7 +468,7 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataViewDetalleItems).EndInit();
             ResumeLayout(false);
         }
 
@@ -387,10 +494,23 @@
         private Label label8;
         private Button button3;
         private Label label10;
-        private DataGridView dataGridView1;
+        private DataGridView dataViewDetalleItems;
         private TextBox textbCantidad;
         private Label label9;
-        private TextBox textBox9;
+        private TextBox textbTotal;
         private Label label11;
+        private TextBox textbSubTotal;
+        private Label label12;
+        private Button BuAgregar;
+        private DataGridViewTextBoxColumn IdProducto;
+        private DataGridViewTextBoxColumn Producto;
+        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn PrecioCantidad;
+        private DataGridViewTextBoxColumn ITBIS;
+        private DataGridViewTextBoxColumn SubTotal;
+        private DataGridViewButtonColumn Opcion;
+        private ComboBox cbxSeleccionITBIS;
+        private Button BuAplicarItbis;
     }
 }

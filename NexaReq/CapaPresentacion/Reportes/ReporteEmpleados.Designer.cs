@@ -28,30 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteEmpleados));
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelContext
             // 
-            panelContext.Size = new Size(1017, 794);
+            panelContext.Margin = new Padding(3, 2, 3, 2);
+            panelContext.Size = new Size(890, 596);
             // 
             // panelHeader
             // 
-            panelHeader.Size = new Size(1017, 87);
+            panelHeader.Margin = new Padding(3, 2, 3, 2);
+            panelHeader.Size = new Size(890, 65);
             // 
             // label1
             // 
-            label1.Size = new Size(157, 40);
+            label1.Size = new Size(127, 31);
             label1.Text = "Empleados";
             // 
             // ReporteEmpleados
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 881);
-            MaximumSize = new Size(1017, 881);
-            MinimumSize = new Size(1017, 881);
+            ClientSize = new Size(890, 661);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(890, 661);
+            MinimumSize = new Size(890, 661);
             Name = "ReporteEmpleados";
             Text = "NexaReq - Empleados";
             panelHeader.ResumeLayout(false);

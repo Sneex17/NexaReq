@@ -1,5 +1,6 @@
 ﻿using CapaAccesoDatos;
 using CapaAccesoDatos.Controller;
+using CapaEntidades;
 using CapaEntidades.EntidadesA;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,46 @@ namespace CapaNegocio
         public static DataTable TablaProductos()
         {
             return DatosProductos.ListaProductos();
+        }
+
+        public static string PrecioPorCantidad(decimal precio, decimal itbis, int cantidad)
+        {
+            decimal subTotal = (precio + itbis) * cantidad;
+            return Convert.ToString(subTotal);
+        }
+
+        public static decimal Preciocantidad(decimal precio, int cantidad)
+        {
+            decimal precioCantidad = precio * cantidad;
+            return precioCantidad;
+        }
+
+        public static bool AgregarMasCanntidadProducto(int idProducto, int NewCantidad,
+            decimal NewPreciocantidad, decimal NewITBIS, decimal NewSubTotal)
+        {
+            var dato = Items.listaProducto.Find(L => L.IdProducto == idProducto);
+            if(dato == null)
+            {
+                return false;
+            }
+            else
+            {
+                dato.Cantidad += NewCantidad;
+                dato.PrecioCantidad += NewPreciocantidad;
+                dato.ITBIS += NewITBIS;
+                dato.SubTotal += NewSubTotal;
+                return true;
+            }
+        }
+
+        public static decimal CalculoTotal()
+        {
+            decimal Total = 0;
+            foreach (var subToal in Items.listaProducto)
+            {
+                Total += subToal.SubTotal;
+            }
+            return Total;
         }
     }
 }

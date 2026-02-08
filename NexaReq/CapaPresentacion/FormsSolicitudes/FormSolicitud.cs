@@ -7,19 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
 using CapaNegocio;
 using CapaPresentacion.Plantillas;
 using CapaPresentacion.Reportes;
+using CapaNegocio.StrategyPattern;
 
 namespace CapaPresentacion.FormsSolicitudes
 {
     public partial class FormSolicitud : UIregistro
     {
+        RequisicionStrategyContext strategyContext = new RequisicionStrategyContext();
+        string precioUnito, precioSubtotal;
         public FormSolicitud()
         {
             InitializeComponent();
+            CargarItbis();
         }
 
+        private void CargarItbis()
+        {
+            cbxSeleccionITBIS.Items.Add("Sin ITBIS");
+            cbxSeleccionITBIS.Items.Add("ITBIS 16%");
+            cbxSeleccionITBIS.Items.Add("ITBIS 18%");
+        }
         private void BuBuscarEmpleados_Click(object sender, EventArgs e)
         {
             DataRow[] encontral = new DataRow[0];
@@ -51,13 +62,163 @@ namespace CapaPresentacion.FormsSolicitudes
             };
             productos.ShowDialog();
 
-            if(encontral.Length > 0)
+            if (encontral.Length > 0)
             {
                 DataRow producto = encontral[0];
                 textbIdProducto.Text = producto["IdProducto"].ToString();
                 textbProducto.Text = producto["Producto"].ToString();
                 textbPrecioUnit.Text = producto["Precio"].ToString();
-                textbITBIS.Text = producto["ITBIS"].ToString();
+                //textbITBIS.Text = producto["ITBIS"].ToString();
+                //textbSubTotal.Text = Convert.ToString(
+                //    Convert.ToDecimal(textbPrecioUnit.Text) +
+                //    Convert.ToDecimal(textbITBIS.Text));
+            }
+            precioUnito = textbPrecioUnit.Text;
+            //precioSubtotal = textbSubTotal.Text;
+        }
+
+        private void textbCantidad_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textbCantidad.Text == "0")
+                {
+                    throw new ControlExcepciones("La cantidad debe ser mayor que 0");
+                }
+                if (string.IsNullOrWhiteSpace(textbCantidad.Text))
+                {
+                    textbPrecioUnit.Text = precioUnito;
+                    textbSubTotal.Text = precioSubtotal;
+                }
+                else
+                {
+                    decimal precio = Convert.ToDecimal(textbPrecioUnit.Text);
+                    decimal itbis = Convert.ToDecimal(textbITBIS.Text);
+                    int cantidad = Convert.ToInt32(textbCantidad.Text);
+                    textbSubTotal.Text = LogicaNegocio.PrecioPorCantidad(precio, itbis, cantidad);
+                }
+            }
+            catch (ControlExcepciones errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
+        }
+
+        private void BuAgregar_Click(object sender, EventArgs e)
+        {
+            if (Items.listaProducto.Count == 0)
+            {
+                AgregarItems();
+                AgregarListaItems();
+                CalcularTotal();
+            }
+            else
+            {
+                int idProducto = Convert.ToInt32(textbIdProducto.Text);
+                int NewCantidad = Convert.ToInt32(textbCantidad.Text);
+                decimal NewPreciocantidad = LogicaNegocio.Preciocantidad(
+                        Convert.ToDecimal(textbPrecioUnit.Text), Convert.ToInt32(textbCantidad.Text));
+                decimal NewITBIS = Convert.ToDecimal(textbITBIS.Text);
+                string SubTotal = LogicaNegocio.PrecioPorCantidad(
+                    Convert.ToDecimal(textbPrecioUnit.Text), NewITBIS, NewCantidad);
+                decimal NewSubTotal = Convert.ToDecimal(SubTotal);
+
+                var resultado = LogicaNegocio.AgregarMasCanntidadProducto(idProducto, NewCantidad,
+                    NewPreciocantidad, NewITBIS, NewSubTotal);
+
+                if (!resultado)
+                {
+                    AgregarItems();
+                    AgregarListaItems();
+                    CalcularTotal();
+                }
+                else
+                {
+                    AgregarListaItems();
+                    CalcularTotal();
+                }
+            }
+        }
+        private void AgregarItems()
+        {
+            Items.listaProducto.Add(new Items
+            {
+                IdProducto = Convert.ToInt32(textbIdProducto.Text),
+                Producto = textbProducto.Text,
+                Precio = Convert.ToDecimal(textbPrecioUnit.Text),
+                Cantidad = Convert.ToInt32(textbCantidad.Text),
+                PrecioCantidad = LogicaNegocio.Preciocantidad(
+                        Convert.ToDecimal(textbPrecioUnit.Text), Convert.ToInt32(textbCantidad.Text)),
+                ITBIS = Convert.ToDecimal(textbITBIS.Text),
+                SubTotal = Convert.ToDecimal(textbSubTotal.Text)
+            });
+        }
+        private void LimpiarCampos()
+        {
+            textbIdProducto.Text = string.Empty;
+            textbProducto.Text = string.Empty;
+            textbPrecioUnit.Text = string.Empty;
+            textbCantidad.Text = string.Empty;
+            textbITBIS.Text = string.Empty;
+            textbSubTotal.Text = string.Empty;
+            BuAplicarItbis.Enabled = true;
+            cbxSeleccionITBIS.Text = "Elegir itbis";             
+        }
+        private void AgregarListaItems()
+        {
+            dataViewDetalleItems.Rows.Clear();
+            foreach (var item in Items.listaProducto)
+            {
+                dataViewDetalleItems.Rows.Add(new object[]
+                {
+                        item.IdProducto, item.Producto,
+                        item.Precio, item.Cantidad,
+                        item.PrecioCantidad, item.ITBIS,
+                        item.SubTotal, "Eliminar"
+                });
+            }
+            LimpiarCampos();
+        }
+        private void CalcularTotal()
+        {
+            textbTotal.Text = Convert.ToString(LogicaNegocio.CalculoTotal());
+        }
+
+        private void ControlITBIS(IStrategyItbis strategy)
+        {
+            strategyContext.SelecionarItbis(strategy);
+            textbITBIS.Text = Convert.ToString(
+                strategyContext.ObtenerItbis(Convert.ToDecimal(precioUnito)));
+            BuAplicarItbis.Enabled = false;
+            textbSubTotal.Text = Convert.ToString(
+                Convert.ToDecimal(textbPrecioUnit.Text) +
+                Convert.ToDecimal(textbITBIS.Text));
+            precioSubtotal = textbSubTotal.Text;
+        }
+        private void BuAplicarItbis_Click(object sender, EventArgs e)
+        {
+            switch (cbxSeleccionITBIS.Text)
+            {
+                case "Sin ITBIS":
+                    { ControlITBIS(new SinItbisStrategy()); }
+                    break;
+
+                case "ITBIS 16%":
+                    { ControlITBIS(new ItbisSixTeen()); }
+                    break;
+
+                case "ITBIS 18%":
+                    { ControlITBIS(new ItbisEightTeen()); }
+                    break;
+
+                default:
+                    break;               
             }
         }
     }
