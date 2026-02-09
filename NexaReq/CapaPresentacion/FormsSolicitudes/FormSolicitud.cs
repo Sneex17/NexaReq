@@ -1,4 +1,12 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaEntidades.BuilderPattern.DetalleRequisicion;
+using CapaEntidades.BuilderPattern.Requisiciones;
+using CapaEntidades.StatePattern;
+using CapaNegocio;
+using CapaNegocio.StrategyPattern;
+using CapaPresentacion.Plantillas;
+using CapaPresentacion.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,21 +15,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaEntidades;
-using CapaNegocio;
-using CapaPresentacion.Plantillas;
-using CapaPresentacion.Reportes;
-using CapaNegocio.StrategyPattern;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CapaPresentacion.FormsSolicitudes
 {
     public partial class FormSolicitud : UIregistro
     {
         RequisicionStrategyContext strategyContext = new RequisicionStrategyContext();
+        private RequisicionEstado requisicionEstado;
         string precioUnito, precioSubtotal;
         public FormSolicitud()
         {
             InitializeComponent();
+            requisicionEstado = new RequisicionEstado();
             CargarItbis();
         }
 
@@ -100,14 +106,14 @@ namespace CapaPresentacion.FormsSolicitudes
             }
             catch (ControlExcepciones errores)
             {
-                MessageBox.Show($"{errores.Message}", "Cantidad no valida", 
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception errores)
             {
                 MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }  
+            }
         }
 
         private void BuAgregar_Click(object sender, EventArgs e)
@@ -168,7 +174,7 @@ namespace CapaPresentacion.FormsSolicitudes
             textbITBIS.Text = string.Empty;
             textbSubTotal.Text = string.Empty;
             BuAplicarItbis.Enabled = true;
-            cbxSeleccionITBIS.Text = "Elegir itbis";             
+            cbxSeleccionITBIS.Text = "Elegir itbis";
         }
         private void AgregarListaItems()
         {
@@ -218,8 +224,111 @@ namespace CapaPresentacion.FormsSolicitudes
                     break;
 
                 default:
-                    break;               
+                    break;
             }
+        }
+
+        private void BuSolicitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataViewDetalleItems.Rows.Count <= 1)
+                {
+                    throw new ControlExcepciones("Debe de agregar por lo menos 1 producto para realizar la solicitud de compra");
+                }
+                else
+                {
+                    var empleado = new Empleado 
+                    {
+                        IdEmpleado = Convert.ToInt32(textbIdEmpleado.Text),
+                        Nombre = textbNombre.Text,
+                    };
+
+                    var listaDepartamento = LogicaNegocio.ListaDepartamentos();
+                    var Departamento = from L in listaDepartamento
+                                         where (L.NombreDepartamento == textbDepartamento.Text)
+                                         select new { L.IdDepartamento };
+
+                    int IdDepartamento = 0;
+                    foreach (var id in Departamento )
+                    {
+                        IdDepartamento = id.IdDepartamento;
+                    }
+
+                    var departamento = new Departamento
+                    { 
+                        NombreDepartamento = textbDepartamento.Text,
+                        IdDepartamento = IdDepartamento
+                    };
+
+                    requisicionEstado.Creada();
+                    string idRequisicion = LogicaNegocio.GeneralIdRequisicion();
+
+                    IRequisicionesBuilder requisicionesBuilder = new RequisicionBuilder();
+                    Requisicion requisicion = requisicionesBuilder
+                        .ConIdRequisicion(idRequisicion)
+                        .ConEmpleado(empleado)
+                        .ConDepartamento(departamento)
+                        .ConTotal(Convert.ToDecimal(textbTotal.Text))
+                        .ConFechaCreacion(DateTime.Today)
+                        .ConFechaModificacion(DateTime.Today)
+                        .ConEstado(requisicionEstado)
+                        .Builder();
+
+
+                    foreach (DataGridViewRow item in dataViewDetalleItems.Rows)
+                    {
+                        if (item.IsNewRow) continue;
+                        var productos = new Productos
+                        {
+                            IdProducto = Convert.ToInt32(item.Cells[0].Value.ToString()),
+                            Producto = item.Cells[1].Value.ToString(),
+                            Precio = Convert.ToDecimal(item.Cells[2].Value.ToString()),
+                            ITBIS = Convert.ToDecimal(item.Cells[5].Value.ToString())
+                        };
+
+                        var items = new Items
+                        {
+                            Cantidad = Convert.ToInt32(item.Cells[3].Value.ToString()),
+                            PrecioCantidad = Convert.ToDecimal(item.Cells[4].Value.ToString()),
+                            SubTotal = Convert.ToDecimal(item.Cells[6].Value.ToString())
+                        };
+
+                        IDetalleRequisicion detalleRequisicionBuilder = new DetalleRequisicionBuilder();
+                        DetalleRequisicion detalle = detalleRequisicionBuilder
+                            .ConRequisicion(requisicion)
+                            .ConProducto(productos)
+                            .ConItem(items)
+                            .Builder();
+
+                        MessageBox.Show($"{detalle.Requisicion.IdRequisicion}\n{detalle.Productos.IdProducto}\n" +
+                        $"{detalle.Productos.Producto}\n{detalle.Productos.Precio}\n" +
+                        $"{detalle.Productos.ITBIS}\n{detalle.Items.Cantidad}\n" +
+                        $"{detalle.Items.PrecioCantidad}\n{detalle.Items.SubTotal}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                    MessageBox.Show($"{requisicion.IdRequisicion}\n{requisicion.Empleado.IdEmpleado}\n" +
+                        $"{requisicion.Departamento.IdDepartamento}\n{requisicion.Total}\n" +
+                        $"{requisicion.Estado.estado.Id}\n", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (ControlExcepciones errores)
+            {
+
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception errores)
+            {
+
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

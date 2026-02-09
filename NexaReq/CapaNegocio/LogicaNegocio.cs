@@ -77,5 +77,16 @@ namespace CapaNegocio
             }
             return Total;
         }
+
+        public static List<Departamento> ListaDepartamentos()
+        {
+            return DatosDepartamento.Departamentos();
+        }
+        public static string GeneralIdRequisicion()
+        {
+            int count = DatosRequisicion.Requisiciones();
+            string idRequisicion = $"RSC-NR{count + 1}";
+            return idRequisicion;
+        }
     }
 }

@@ -37,6 +37,8 @@
             textbIdEmpleado = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            BuAplicarItbis = new Button();
+            cbxSeleccionITBIS = new ComboBox();
             BuAgregar = new Button();
             textbSubTotal = new TextBox();
             label12 = new Label();
@@ -61,11 +63,9 @@
             SubTotal = new DataGridViewTextBoxColumn();
             Opcion = new DataGridViewButtonColumn();
             label10 = new Label();
-            button3 = new Button();
+            BuSolicitar = new Button();
             textbTotal = new TextBox();
             label11 = new Label();
-            cbxSeleccionITBIS = new ComboBox();
-            BuAplicarItbis = new Button();
             panelHeader.SuspendLayout();
             panelContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -83,7 +83,7 @@
             // 
             panelContext.Controls.Add(textbTotal);
             panelContext.Controls.Add(label11);
-            panelContext.Controls.Add(button3);
+            panelContext.Controls.Add(BuSolicitar);
             panelContext.Controls.Add(label10);
             panelContext.Controls.Add(dataViewDetalleItems);
             panelContext.Controls.Add(groupBox2);
@@ -211,6 +211,25 @@
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos de los Productos";
+            // 
+            // BuAplicarItbis
+            // 
+            BuAplicarItbis.Location = new Point(134, 99);
+            BuAplicarItbis.Name = "BuAplicarItbis";
+            BuAplicarItbis.Size = new Size(91, 28);
+            BuAplicarItbis.TabIndex = 15;
+            BuAplicarItbis.Text = "Aplicar";
+            BuAplicarItbis.UseVisualStyleBackColor = true;
+            BuAplicarItbis.Click += BuAplicarItbis_Click;
+            // 
+            // cbxSeleccionITBIS
+            // 
+            cbxSeleccionITBIS.FormattingEnabled = true;
+            cbxSeleccionITBIS.Location = new Point(16, 98);
+            cbxSeleccionITBIS.Name = "cbxSeleccionITBIS";
+            cbxSeleccionITBIS.Size = new Size(112, 28);
+            cbxSeleccionITBIS.TabIndex = 14;
+            cbxSeleccionITBIS.Text = "Elegir itbis";
             // 
             // BuAgregar
             // 
@@ -400,15 +419,16 @@
             label10.TabIndex = 11;
             label10.Text = "Detalle de los Productos";
             // 
-            // button3
+            // BuSolicitar
             // 
-            button3.Font = new Font("Segoe UI", 11F);
-            button3.Location = new Point(764, 499);
-            button3.Name = "button3";
-            button3.Size = new Size(106, 47);
-            button3.TabIndex = 7;
-            button3.Text = "Solicitar";
-            button3.UseVisualStyleBackColor = true;
+            BuSolicitar.Font = new Font("Segoe UI", 11F);
+            BuSolicitar.Location = new Point(764, 499);
+            BuSolicitar.Name = "BuSolicitar";
+            BuSolicitar.Size = new Size(106, 47);
+            BuSolicitar.TabIndex = 7;
+            BuSolicitar.Text = "Solicitar";
+            BuSolicitar.UseVisualStyleBackColor = true;
+            BuSolicitar.Click += BuSolicitar_Click;
             // 
             // textbTotal
             // 
@@ -429,25 +449,6 @@
             label11.Size = new Size(42, 20);
             label11.TabIndex = 11;
             label11.Text = "Total";
-            // 
-            // cbxSeleccionITBIS
-            // 
-            cbxSeleccionITBIS.FormattingEnabled = true;
-            cbxSeleccionITBIS.Location = new Point(16, 98);
-            cbxSeleccionITBIS.Name = "cbxSeleccionITBIS";
-            cbxSeleccionITBIS.Size = new Size(112, 28);
-            cbxSeleccionITBIS.TabIndex = 14;
-            cbxSeleccionITBIS.Text = "Elegir itbis";
-            // 
-            // BuAplicarItbis
-            // 
-            BuAplicarItbis.Location = new Point(134, 99);
-            BuAplicarItbis.Name = "BuAplicarItbis";
-            BuAplicarItbis.Size = new Size(91, 28);
-            BuAplicarItbis.TabIndex = 15;
-            BuAplicarItbis.Text = "Aplicar";
-            BuAplicarItbis.UseVisualStyleBackColor = true;
-            BuAplicarItbis.Click += BuAplicarItbis_Click;
             // 
             // FormSolicitud
             // 
@@ -492,7 +493,7 @@
         private Label label4;
         private TextBox textbITBIS;
         private Label label8;
-        private Button button3;
+        private Button BuSolicitar;
         private Label label10;
         private DataGridView dataViewDetalleItems;
         private TextBox textbCantidad;

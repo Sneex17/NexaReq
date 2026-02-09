@@ -6,7 +6,7 @@ namespace CapaEntidades.BuilderPattern.Requisiciones
     public class RequisicionBuilder : IRequisicionesBuilder
     {
         private readonly Requisicion _requisicion = new Requisicion();
-        public IRequisicionesBuilder ConIdRequisicion(int id)
+        public IRequisicionesBuilder ConIdRequisicion(string id)
         {
             _requisicion.IdRequisicion = id;
             return this;
@@ -21,14 +21,24 @@ namespace CapaEntidades.BuilderPattern.Requisiciones
             _requisicion.Departamento = departamento;
             return this;
         }
-        public IRequisicionesBuilder ConEstado(RequisicionEstado estado)
+        public IRequisicionesBuilder ConFechaCreacion(DateTime fechacreacion)
         {
-            _requisicion.Estado = estado;
+            _requisicion.FechaCreacion = fechacreacion;
+            return this;
+        }
+        public IRequisicionesBuilder ConFechaModificacion(DateTime fechamodificacion)
+        {
+            _requisicion.FechaModificacion = fechamodificacion;
             return this;
         }
         public IRequisicionesBuilder ConTotal(decimal total)
         {
             _requisicion.Total = total;
+            return this;
+        }
+        public IRequisicionesBuilder ConEstado(RequisicionEstado estado)
+        {
+            _requisicion.Estado = estado;
             return this;
         }
         public Requisicion Builder()

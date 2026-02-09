@@ -279,4 +279,55 @@ go
 use GestionNexaReqDB
 select * from sys.procedures
 
+--Domingo 8 febrero
+use GestionNexaReqDB
+go
 
+
+select * from sys.tables
+select * from Productos
+create table Estados(
+IdEstado int primary key identity,
+Estado varchar(30) not null
+)
+
+insert into Estados (Estado) values
+('Creada'),
+('En Revisión'),
+('Aprobada'),
+('Rechazada'),
+('Cancelada')
+go
+select * from Estados
+
+create table Requisiciones(
+IdRequisicion varchar(17) primary key,
+IdEmpleado int not null,
+IdDepartamento int not null,
+Total decimal(10,2) not null,
+FechaCreacion date not null,
+FechaModificacion date not null,
+IdEstado int not null
+
+constraint FK_RequisicionEmpleado foreign key (IdEmpleado) references Empleados(IdEmpleado),
+constraint FK_RequisicionDepartamento foreign key (IdDepartamento) references Departamentos(IdDepartamento),
+constraint FK_RequisicionEstado foreign key (IdEstado) references Estados(IdEstado)
+)
+go
+
+select * from Requisiciones
+
+create proc pa_CantidadIdentity
+as
+begin 
+select COUNT(1) from Requisiciones
+end 
+
+
+create proc pa_ListaDepartamentos
+as
+begin
+select * from Departamentos
+end
+
+select * from Empleados
