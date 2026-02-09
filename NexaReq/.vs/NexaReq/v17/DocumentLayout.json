@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\capapresentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\MenuPrincipal.cs",
@@ -43,7 +47,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Login.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T01:10:01.835Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FormSolicitud.cs",
               "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
@@ -56,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FormSolicitud.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",

@@ -69,3 +69,4 @@ C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaPresentacion\obj\Debug\ne
 C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaPresentacion\obj\Debug\net9.0-windows\CapaPresentacion.Plantillas.UIReportes.resources
 C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaPresentacion\obj\Debug\net9.0-windows\CapaPresentacion.Reportes.ReporteEmpleados.resources
 C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaPresentacion\obj\Debug\net9.0-windows\CapaPresentacion.Reportes.ReporteProductos.resources
+C:\Users\xrami\OneDrive\Escritorio\NexaReq\NexaReq\CapaPresentacion\obj\Debug\net9.0-windows\CapaPresentacion.Properties.Resources.resources

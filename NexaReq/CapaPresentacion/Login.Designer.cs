@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panelFondo = new Panel();
+            pictureBox1 = new PictureBox();
             label3 = new Label();
             textbPassword = new TextBox();
             label2 = new Label();
@@ -40,11 +41,14 @@
             label1 = new Label();
             errorProviderLogin = new ErrorProvider(components);
             panelFondo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderLogin).BeginInit();
             SuspendLayout();
             // 
             // panelFondo
             // 
+            panelFondo.BackColor = Color.White;
+            panelFondo.Controls.Add(pictureBox1);
             panelFondo.Controls.Add(label3);
             panelFondo.Controls.Add(textbPassword);
             panelFondo.Controls.Add(label2);
@@ -58,10 +62,21 @@
             panelFondo.Size = new Size(800, 450);
             panelFondo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.LogoTipo;
+            pictureBox1.Location = new Point(211, 10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(105, 101);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Impact", 25.25F, FontStyle.Italic);
+            label3.ForeColor = Color.FromArgb(15, 47, 99);
             label3.Location = new Point(332, 30);
             label3.Name = "label3";
             label3.Size = new Size(137, 42);
@@ -82,6 +97,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(15, 47, 99);
             label2.Location = new Point(301, 175);
             label2.Name = "label2";
             label2.Size = new Size(73, 20);
@@ -102,6 +118,7 @@
             // 
             // BuIngresar
             // 
+            BuIngresar.BackColor = Color.FromArgb(44, 206, 117);
             BuIngresar.Cursor = Cursors.Hand;
             BuIngresar.FlatStyle = FlatStyle.Flat;
             BuIngresar.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -110,7 +127,7 @@
             BuIngresar.Size = new Size(202, 39);
             BuIngresar.TabIndex = 2;
             BuIngresar.Text = "Ingresar";
-            BuIngresar.UseVisualStyleBackColor = true;
+            BuIngresar.UseVisualStyleBackColor = false;
             BuIngresar.Click += BuIngresar_Click;
             // 
             // textbUsername
@@ -127,6 +144,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(15, 47, 99);
             label1.Location = new Point(298, 116);
             label1.Name = "label1";
             label1.Size = new Size(78, 20);
@@ -149,6 +167,7 @@
             Text = "NexaReq";
             panelFondo.ResumeLayout(false);
             panelFondo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderLogin).EndInit();
             ResumeLayout(false);
         }
@@ -164,5 +183,6 @@
         private Label label2;
         private Label label3;
         private ErrorProvider errorProviderLogin;
+        private PictureBox pictureBox1;
     }
 }
