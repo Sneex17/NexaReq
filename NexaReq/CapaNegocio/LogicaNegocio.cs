@@ -1,7 +1,9 @@
 ﻿using CapaAccesoDatos;
 using CapaAccesoDatos.Controller;
 using CapaEntidades;
+using CapaEntidades.BuilderPattern.Requisiciones;
 using CapaEntidades.EntidadesA;
+using CapaEntidades.BuilderPattern.DetalleRequisicion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -87,6 +89,16 @@ namespace CapaNegocio
             int count = DatosRequisicion.Requisiciones();
             string idRequisicion = $"RSC-NR{count + 1}";
             return idRequisicion;
+        }
+
+        public static void InsertarRequisicion(Requisicion requisicion)
+        {
+            DatosRequisicion.AgregarRequisicion(requisicion);
+        }
+
+        public static void InsertarDetalleRequisicion(DetalleRequisicion detalleRequisicion)
+        {
+            DatosDetalleRequisicion.AgregarDetalleRequisicion(detalleRequisicion);
         }
     }
 }

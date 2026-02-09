@@ -331,3 +331,101 @@ select * from Departamentos
 end
 
 select * from Empleados
+
+
+-- Lunes 9 febrero
+
+create table DetalleRequisicion(
+IdDetalleRequisicion int primary key identity(1,1),
+IdRequisicion varchar(17) not null,
+IdProducto int not null,
+Producto varchar(50) not null,
+Precio decimal(10,2) not null,
+ITBIS decimal(10,2) not null,
+Cantidad int not null,
+PrecioCantidad decimal(10,2) not null,
+SubTotal decimal(10,2) not null
+
+constraint FK_Requisicion foreign key (IdRequisicion) references Requisiciones(IdRequisicion),
+constraint FK_DetalleProducto foreign key (IdProducto) references Productos(IdProducto)
+
+)
+go
+
+select * from Requisiciones
+select * from DetalleRequisicion
+
+
+
+
+--Procedimientos almacenados
+
+CREATE PROCEDURE pa_AgregarRequisicion
+    @IdRequisicion VARCHAR(17),
+    @IdEmpleado INT,
+    @IdDepartamento INT,
+    @FechaCreacion date,
+    @FechaModificacion date,
+    @Total DECIMAL(10,2),
+    @IdEstado INT
+AS
+BEGIN       
+            -- Insertar requisición
+            INSERT INTO Requisiciones (
+                IdRequisicion, 
+                IdEmpleado, 
+                IdDepartamento, 
+                Total, 
+                FechaCreacion, 
+                FechaModificacion, 
+                IdEstado
+            )
+            VALUES (
+                @IdRequisicion,
+                @IdEmpleado,
+                @IdDepartamento,
+                @Total,
+                @FechaCreacion,
+                @FechaModificacion,
+                @IdEstado
+            );
+END
+GO
+select * from DetalleRequisicion
+go
+
+CREATE PROCEDURE pa_AgregarDetalleRequisicion
+    @IdRequisicion VARCHAR(17),
+    @IdProducto INT,
+    @Producto VARCHAR(50),
+    @Precio DECIMAL(10,2),
+    @ITBIS DECIMAL(10,2),
+    @Cantidad INT,
+    @PrecioCantidad DECIMAL(10,2),
+    @SubTotal DECIMAL(10,2)
+AS
+BEGIN        
+            -- Insertar detalle
+            INSERT INTO DetalleRequisicion (
+                IdRequisicion,
+                IdProducto,
+                Producto,
+                Precio,
+                ITBIS,
+                Cantidad,
+                PrecioCantidad,
+                SubTotal
+            )
+            VALUES (
+                @IdRequisicion,
+                @IdProducto,
+                @Producto,
+                @Precio,
+                @ITBIS,
+                @Cantidad,
+                @PrecioCantidad,
+                @SubTotal
+            );          
+END
+GO
+

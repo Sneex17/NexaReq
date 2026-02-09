@@ -26,13 +26,15 @@ namespace CapaAccesoDatos.Controller
             using (SqlConnection acceso = ConexionBD.Instancia.ObtenerConexion())
             {
                 int resultado;
-                SqlCommand comando = new SqlCommand("", acceso);
+                SqlCommand comando = new SqlCommand("pa_AgregarRequisicion", acceso);
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("", requisicion.IdRequisicion);
-                comando.Parameters.AddWithValue("", requisicion.Empleado.IdEmpleado);
-                comando.Parameters.AddWithValue("", requisicion.Departamento.IdDepartamento);
-                comando.Parameters.AddWithValue("", requisicion.Total);
-                comando.Parameters.AddWithValue("", requisicion.Estado.IdEstado);
+                comando.Parameters.AddWithValue("@IdRequisicion", requisicion.IdRequisicion);
+                comando.Parameters.AddWithValue("@IdEmpleado", requisicion.Empleado.IdEmpleado);
+                comando.Parameters.AddWithValue("@IdDepartamento", requisicion.Departamento.IdDepartamento);
+                comando.Parameters.AddWithValue("@FechaCreacion", requisicion.FechaCreacion);
+                comando.Parameters.AddWithValue("@FechaModificacion", requisicion.FechaModificacion);
+                comando.Parameters.AddWithValue("@Total", requisicion.Total);
+                comando.Parameters.AddWithValue("@IdEstado", requisicion.Estado.estado.Id);
                 resultado = comando.ExecuteNonQuery();
             }
         }

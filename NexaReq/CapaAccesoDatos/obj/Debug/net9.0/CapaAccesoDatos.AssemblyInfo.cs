@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CapaAccesoDatos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e450585226fc24b34d15338e23dcfeb93da4a740")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eb55bd484afa4fbe04a0cc0eb726f7399d59b1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CapaAccesoDatos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CapaAccesoDatos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
