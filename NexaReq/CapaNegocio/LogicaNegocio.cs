@@ -100,5 +100,10 @@ namespace CapaNegocio
         {
             DatosDetalleRequisicion.AgregarDetalleRequisicion(detalleRequisicion);
         }
+
+        public static DataTable TablaRequisiciones()
+        {
+            return DatosRequisicion.ListaRequisiciones();   
+        }
     }
 }

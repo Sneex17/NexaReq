@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             panelHeader = new Panel();
-            panelContext = new Panel();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            panelContext = new Panel();
+            BuCerrarVentana = new Button();
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelContext.SuspendLayout();
             SuspendLayout();
             // 
             // panelHeader
             // 
-            panelHeader.BackColor = SystemColors.AppWorkspace;
+            panelHeader.BackColor = Color.FromArgb(44, 206, 117);
             panelHeader.Controls.Add(label1);
             panelHeader.Controls.Add(pictureBox1);
             panelHeader.Dock = DockStyle.Top;
@@ -47,13 +49,16 @@
             panelHeader.Size = new Size(890, 65);
             panelHeader.TabIndex = 0;
             // 
-            // panelContext
+            // label1
             // 
-            panelContext.Dock = DockStyle.Fill;
-            panelContext.Location = new Point(0, 65);
-            panelContext.Name = "panelContext";
-            panelContext.Size = new Size(890, 596);
-            panelContext.TabIndex = 1;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(16, 40, 99);
+            label1.Location = new Point(113, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 31);
+            label1.TabIndex = 1;
+            label1.Text = "Texto";
             // 
             // pictureBox1
             // 
@@ -63,15 +68,29 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label1
+            // panelContext
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 17F);
-            label1.Location = new Point(113, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 31);
-            label1.TabIndex = 1;
-            label1.Text = "Texto";
+            panelContext.BackColor = Color.White;
+            panelContext.Controls.Add(BuCerrarVentana);
+            panelContext.Dock = DockStyle.Fill;
+            panelContext.Location = new Point(0, 65);
+            panelContext.Name = "panelContext";
+            panelContext.Size = new Size(890, 596);
+            panelContext.TabIndex = 1;
+            // 
+            // BuCerrarVentana
+            // 
+            BuCerrarVentana.BackColor = Color.FromArgb(16, 40, 99);
+            BuCerrarVentana.Cursor = Cursors.Hand;
+            BuCerrarVentana.FlatStyle = FlatStyle.Popup;
+            BuCerrarVentana.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            BuCerrarVentana.ForeColor = Color.White;
+            BuCerrarVentana.Location = new Point(41, 512);
+            BuCerrarVentana.Name = "BuCerrarVentana";
+            BuCerrarVentana.Size = new Size(128, 47);
+            BuCerrarVentana.TabIndex = 7;
+            BuCerrarVentana.Text = "Cerrar ventana";
+            BuCerrarVentana.UseVisualStyleBackColor = false;
             // 
             // UIregistro
             // 
@@ -88,6 +107,7 @@
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelContext.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -97,5 +117,6 @@
         public Panel panelContext;
         public Label label1;
         public PictureBox pictureBox1;
+        public Button BuCerrarVentana;
     }
 }

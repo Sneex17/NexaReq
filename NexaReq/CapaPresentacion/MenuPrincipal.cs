@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.FormsSolicitudes;
+using CapaPresentacion.FormsRevisiones;
 
 namespace CapaPresentacion
 {
@@ -85,6 +86,21 @@ namespace CapaPresentacion
         private void BuSolicitud_Click(object sender, EventArgs e)
         {
             OpenForms(new FormSolicitud());
+        }
+
+        private void BuReporteSolicitud_Click(object sender, EventArgs e)
+        {
+            OpenForms(new FormsReportes());
+        }
+
+        private void BuRevisiones_Click(object sender, EventArgs e)
+        {
+            OpenForms(new FormRevision());
+        }
+
+        private void BuReportesPendientes_Click(object sender, EventArgs e)
+        {
+            OpenForms(new FormReporteEnRevision());
         }
     }
 }

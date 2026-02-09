@@ -242,7 +242,7 @@ namespace CapaPresentacion.FormsSolicitudes
                     var mensaje = MessageBox.Show($"Desea realiar esta solicitud de compra?", "Requisición de Compra",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if(mensaje == DialogResult.Yes)
+                    if (mensaje == DialogResult.Yes)
                     {
                         var empleado = new Empleado
                         {
@@ -324,7 +324,7 @@ namespace CapaPresentacion.FormsSolicitudes
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LimpiarTodo();
-                        MessageBox.Show("Requisición de Compra completada", "Requisición de Compra", 
+                        MessageBox.Show("Requisición de Compra completada", "Requisición de Compra",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
@@ -341,7 +341,7 @@ namespace CapaPresentacion.FormsSolicitudes
                 MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-   
+
         }
 
         private void LimpiarTodo()
@@ -357,7 +357,7 @@ namespace CapaPresentacion.FormsSolicitudes
             textbCantidad.Text = string.Empty;
             textbITBIS.Text = string.Empty;
             textbSubTotal.Text = string.Empty;
-            
+
 
             BuAplicarItbis.Enabled = true;
             cbxSeleccionITBIS.Text = "Elegir itbis";
@@ -366,6 +366,11 @@ namespace CapaPresentacion.FormsSolicitudes
 
             Items.listaProducto.Clear();
             dataViewDetalleItems.Rows.Clear();
+        }
+
+        private void BuCerrarVentana_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

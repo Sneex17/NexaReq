@@ -32,8 +32,8 @@
             panelMenu = new Panel();
             BuSalirMenu = new Button();
             panelSmRequisiciones = new Panel();
-            button5 = new Button();
-            button6 = new Button();
+            BuReportesPendientes = new Button();
+            BuRevisiones = new Button();
             BuRequisiciones = new Button();
             panelSmSolicitudes = new Panel();
             BuReporteSolicitud = new Button();
@@ -85,47 +85,49 @@
             // 
             // panelSmRequisiciones
             // 
-            panelSmRequisiciones.Controls.Add(button5);
-            panelSmRequisiciones.Controls.Add(button6);
+            panelSmRequisiciones.Controls.Add(BuReportesPendientes);
+            panelSmRequisiciones.Controls.Add(BuRevisiones);
             panelSmRequisiciones.Dock = DockStyle.Top;
             panelSmRequisiciones.Location = new Point(0, 261);
             panelSmRequisiciones.Name = "panelSmRequisiciones";
             panelSmRequisiciones.Size = new Size(194, 100);
             panelSmRequisiciones.TabIndex = 4;
             // 
-            // button5
+            // BuReportesPendientes
             // 
-            button5.BackColor = Color.FromArgb(65, 237, 142);
-            button5.Cursor = Cursors.Hand;
-            button5.Dock = DockStyle.Top;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.FromArgb(15, 47, 99);
-            button5.Location = new Point(0, 40);
-            button5.Name = "button5";
-            button5.Padding = new Padding(27, 0, 0, 0);
-            button5.Size = new Size(194, 40);
-            button5.TabIndex = 1;
-            button5.Text = "Reportes";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
+            BuReportesPendientes.BackColor = Color.FromArgb(65, 237, 142);
+            BuReportesPendientes.Cursor = Cursors.Hand;
+            BuReportesPendientes.Dock = DockStyle.Top;
+            BuReportesPendientes.FlatStyle = FlatStyle.Flat;
+            BuReportesPendientes.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            BuReportesPendientes.ForeColor = Color.FromArgb(15, 47, 99);
+            BuReportesPendientes.Location = new Point(0, 40);
+            BuReportesPendientes.Name = "BuReportesPendientes";
+            BuReportesPendientes.Padding = new Padding(27, 0, 0, 0);
+            BuReportesPendientes.Size = new Size(194, 40);
+            BuReportesPendientes.TabIndex = 1;
+            BuReportesPendientes.Text = "Reportes";
+            BuReportesPendientes.TextAlign = ContentAlignment.MiddleLeft;
+            BuReportesPendientes.UseVisualStyleBackColor = false;
+            BuReportesPendientes.Click += BuReportesPendientes_Click;
             // 
-            // button6
+            // BuRevisiones
             // 
-            button6.BackColor = Color.FromArgb(65, 237, 142);
-            button6.Cursor = Cursors.Hand;
-            button6.Dock = DockStyle.Top;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.FromArgb(15, 47, 99);
-            button6.Location = new Point(0, 0);
-            button6.Name = "button6";
-            button6.Padding = new Padding(27, 0, 0, 0);
-            button6.Size = new Size(194, 40);
-            button6.TabIndex = 0;
-            button6.Text = "Revisiones";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
+            BuRevisiones.BackColor = Color.FromArgb(65, 237, 142);
+            BuRevisiones.Cursor = Cursors.Hand;
+            BuRevisiones.Dock = DockStyle.Top;
+            BuRevisiones.FlatStyle = FlatStyle.Flat;
+            BuRevisiones.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            BuRevisiones.ForeColor = Color.FromArgb(15, 47, 99);
+            BuRevisiones.Location = new Point(0, 0);
+            BuRevisiones.Name = "BuRevisiones";
+            BuRevisiones.Padding = new Padding(27, 0, 0, 0);
+            BuRevisiones.Size = new Size(194, 40);
+            BuRevisiones.TabIndex = 0;
+            BuRevisiones.Text = "Revisiones";
+            BuRevisiones.TextAlign = ContentAlignment.MiddleLeft;
+            BuRevisiones.UseVisualStyleBackColor = false;
+            BuRevisiones.Click += BuRevisiones_Click;
             // 
             // BuRequisiciones
             // 
@@ -169,6 +171,7 @@
             BuReporteSolicitud.Text = "Reportes";
             BuReporteSolicitud.TextAlign = ContentAlignment.MiddleLeft;
             BuReporteSolicitud.UseVisualStyleBackColor = false;
+            BuReporteSolicitud.Click += BuReporteSolicitud_Click;
             // 
             // BuSolicitud
             // 
@@ -275,8 +278,8 @@
         private Panel panelLogo;
         private Panel panelContainer;
         private Panel panelSmRequisiciones;
-        private Button button5;
-        private Button button6;
+        private Button BuReportesPendientes;
+        private Button BuRevisiones;
         private Button BuRequisiciones;
         private Panel panelSmSolicitudes;
         private Button BuReporteSolicitud;

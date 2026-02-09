@@ -90,11 +90,19 @@
             panelContext.Controls.Add(groupBox1);
             panelContext.Margin = new Padding(3, 2, 3, 2);
             panelContext.Size = new Size(1017, 699);
+            panelContext.Controls.SetChildIndex(groupBox1, 0);
+            panelContext.Controls.SetChildIndex(groupBox2, 0);
+            panelContext.Controls.SetChildIndex(dataViewDetalleItems, 0);
+            panelContext.Controls.SetChildIndex(label10, 0);
+            panelContext.Controls.SetChildIndex(BuSolicitar, 0);
+            panelContext.Controls.SetChildIndex(label11, 0);
+            panelContext.Controls.SetChildIndex(textbTotal, 0);
+            panelContext.Controls.SetChildIndex(BuCerrarVentana, 0);
             // 
             // label1
             // 
             label1.Location = new Point(99, 17);
-            label1.Size = new Size(232, 31);
+            label1.Size = new Size(242, 31);
             label1.Text = "Solicitud de Compras";
             // 
             // pictureBox1
@@ -102,6 +110,10 @@
             pictureBox1.Location = new Point(36, 6);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Size = new Size(58, 38);
+            // 
+            // BuCerrarVentana
+            // 
+            BuCerrarVentana.Click += BuCerrarVentana_Click;
             // 
             // groupBox1
             // 
@@ -123,12 +135,17 @@
             // 
             // BuBuscarEmpleados
             // 
+            BuBuscarEmpleados.BackColor = Color.FromArgb(16, 40, 99);
+            BuBuscarEmpleados.Cursor = Cursors.Hand;
+            BuBuscarEmpleados.FlatStyle = FlatStyle.Popup;
+            BuBuscarEmpleados.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            BuBuscarEmpleados.ForeColor = Color.White;
             BuBuscarEmpleados.Location = new Point(760, 24);
             BuBuscarEmpleados.Name = "BuBuscarEmpleados";
             BuBuscarEmpleados.Size = new Size(75, 47);
             BuBuscarEmpleados.TabIndex = 6;
             BuBuscarEmpleados.Text = "Buscar";
-            BuBuscarEmpleados.UseVisualStyleBackColor = true;
+            BuBuscarEmpleados.UseVisualStyleBackColor = false;
             BuBuscarEmpleados.Click += BuBuscarEmpleados_Click;
             // 
             // textbDepartamento
@@ -214,12 +231,17 @@
             // 
             // BuAplicarItbis
             // 
+            BuAplicarItbis.BackColor = Color.FromArgb(16, 40, 99);
+            BuAplicarItbis.Cursor = Cursors.Hand;
+            BuAplicarItbis.FlatStyle = FlatStyle.Popup;
+            BuAplicarItbis.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            BuAplicarItbis.ForeColor = Color.White;
             BuAplicarItbis.Location = new Point(134, 99);
             BuAplicarItbis.Name = "BuAplicarItbis";
             BuAplicarItbis.Size = new Size(91, 28);
             BuAplicarItbis.TabIndex = 15;
             BuAplicarItbis.Text = "Aplicar";
-            BuAplicarItbis.UseVisualStyleBackColor = true;
+            BuAplicarItbis.UseVisualStyleBackColor = false;
             BuAplicarItbis.Click += BuAplicarItbis_Click;
             // 
             // cbxSeleccionITBIS
@@ -233,12 +255,17 @@
             // 
             // BuAgregar
             // 
+            BuAgregar.BackColor = Color.FromArgb(16, 40, 99);
+            BuAgregar.Cursor = Cursors.Hand;
+            BuAgregar.FlatStyle = FlatStyle.Popup;
+            BuAgregar.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BuAgregar.ForeColor = Color.White;
             BuAgregar.Location = new Point(760, 76);
             BuAgregar.Name = "BuAgregar";
             BuAgregar.Size = new Size(75, 47);
             BuAgregar.TabIndex = 13;
             BuAgregar.Text = "+";
-            BuAgregar.UseVisualStyleBackColor = true;
+            BuAgregar.UseVisualStyleBackColor = false;
             BuAgregar.Click += BuAgregar_Click;
             // 
             // textbSubTotal
@@ -297,12 +324,17 @@
             // 
             // BuBuscarProducto
             // 
+            BuBuscarProducto.BackColor = Color.FromArgb(16, 40, 99);
+            BuBuscarProducto.Cursor = Cursors.Hand;
+            BuBuscarProducto.FlatStyle = FlatStyle.Popup;
+            BuBuscarProducto.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            BuBuscarProducto.ForeColor = Color.White;
             BuBuscarProducto.Location = new Point(760, 18);
             BuBuscarProducto.Name = "BuBuscarProducto";
             BuBuscarProducto.Size = new Size(75, 47);
             BuBuscarProducto.TabIndex = 6;
             BuBuscarProducto.Text = "Buscar";
-            BuBuscarProducto.UseVisualStyleBackColor = true;
+            BuBuscarProducto.UseVisualStyleBackColor = false;
             BuBuscarProducto.Click += BuBuscarProducto_Click;
             // 
             // textbPrecioUnit
@@ -421,13 +453,17 @@
             // 
             // BuSolicitar
             // 
-            BuSolicitar.Font = new Font("Segoe UI", 11F);
+            BuSolicitar.BackColor = Color.FromArgb(44, 206, 117);
+            BuSolicitar.Cursor = Cursors.Hand;
+            BuSolicitar.FlatStyle = FlatStyle.Popup;
+            BuSolicitar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BuSolicitar.ForeColor = Color.FromArgb(16, 40, 99);
             BuSolicitar.Location = new Point(764, 499);
             BuSolicitar.Name = "BuSolicitar";
             BuSolicitar.Size = new Size(106, 47);
             BuSolicitar.TabIndex = 7;
             BuSolicitar.Text = "Solicitar";
-            BuSolicitar.UseVisualStyleBackColor = true;
+            BuSolicitar.UseVisualStyleBackColor = false;
             BuSolicitar.Click += BuSolicitar_Click;
             // 
             // textbTotal

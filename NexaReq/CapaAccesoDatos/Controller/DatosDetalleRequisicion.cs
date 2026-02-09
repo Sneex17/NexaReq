@@ -6,6 +6,17 @@ namespace CapaAccesoDatos.Controller
 {
     public class DatosDetalleRequisicion
     {
+
+        public static DataTable TablaDetalleRequisicion()
+        {
+            using (SqlConnection acceso = ConexionBD.Instancia.ObtenerConexion())
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter("pa_CargarDetalleRequisicion", acceso);
+                DataTable TablaDetalleRequisicion = new DataTable();
+                adapter.Fill(TablaDetalleRequisicion);
+                return TablaDetalleRequisicion;
+            }         
+        }
         public static void AgregarDetalleRequisicion(DetalleRequisicion detalle)
         {
             int resultado;
