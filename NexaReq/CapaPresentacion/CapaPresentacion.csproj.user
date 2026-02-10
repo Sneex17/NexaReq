@@ -31,5 +31,8 @@
     <Compile Update="Reportes\ReporteProductos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Reportes\ReporteRequisicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -19,13 +19,10 @@ namespace CapaPresentacion.FormsRevisiones
 {
     public partial class FormRevision : UIregistro
     {
-        RequisicionEstado requisicionEstado = new RequisicionEstado();
         public FormRevision()
         {
             InitializeComponent();
             CargarDatosEstados();
-
-
         }
         private void CargarDatosEstados()
         {
@@ -50,13 +47,15 @@ namespace CapaPresentacion.FormsRevisiones
 
                 DataRow requisicionEnRevixsion = encontral[0];
                 if (requisicionEnRevixsion["Estado"].ToString() == "Creada")
-                {  
-                    requisicionEstado.EnRevision();
+                {
+                    RequisicionEstado requisicionEnRevision = new RequisicionEstado();
+                    requisicionEnRevision.EnRevision();
+
                     IRequisicionesBuilder requisicionesBuilder = new RequisicionBuilder();
                     Requisicion requisicionCambioEstado = requisicionesBuilder
                         .ConIdRequisicion(requisicion.IdRequisicion)
                         .ConFechaModificacion(DateTime.Today)
-                        .ConEstado(requisicionEstado)
+                        .ConEstado(requisicionEnRevision)
                         .Builder();
 
                     LogicaRequisicionNegocio.ActualizarEstadoRequisicion(requisicionCambioEstado);
@@ -90,8 +89,10 @@ namespace CapaPresentacion.FormsRevisiones
                 }
 
                 var listaDetalle = LogicaRequisicionNegocio.ListaRequisicionDetalle();
+                
+
                 var detalle = listaDetalle.Select($"IdRequisicion = '{textbIdRequisicion.Text}'");
-                viewDetalleRequisicion.DataSource = listaDetalle;
+                viewDetalleRequisicion.DataSource = detalle.CopyToDataTable();
             }
             catch (ControlExcepciones errores)
             {
@@ -117,36 +118,44 @@ namespace CapaPresentacion.FormsRevisiones
                 .Builder();
 
             LogicaRequisicionNegocio.ActualizarEstadoRequisicion(requisicionCambioEstado);
+            textbEstadoRequisicion.Text = estado.estado.Estado;
         }
+
         private void BuGuardarCambios_Click(object sender, EventArgs e)
         {
             try
             {
                 if (textbEstadoRequisicion.Text != "En Revisión")
                 {
-                    throw new ControlExcepciones("No se puede cambiar el estado actual de la requisición");
+                    throw new ControlExcepciones($"No se puede {cbxEstadosRequisicion.Text} " +
+                        $"la requisición porque esta ya fue {textbEstadoRequisicion.Text}");
                 }
 
+                RequisicionEstado requisicionEstadoFinal = new RequisicionEstado();
+                requisicionEstadoFinal.EnRevision();
                 switch (cbxEstadosRequisicion.Text)
                 {
                     case "Aprobada":
                         {
-                            requisicionEstado.Aprobada();
-                            CambioFinalEstado(requisicionEstado);
+                            requisicionEstadoFinal.Aprobada();
+                            CambioFinalEstado(requisicionEstadoFinal);
+                            
                         }
                         break;
 
                     case "Rechazada":
                         {
-                            requisicionEstado.Rechazada();
-                            CambioFinalEstado(requisicionEstado);
+                            requisicionEstadoFinal.Rechazada();
+                            CambioFinalEstado(requisicionEstadoFinal);
+                            
                         }
                         break;
 
                     case "Cancelada":
                         {
-                            requisicionEstado.Cancelada();
-                            CambioFinalEstado(requisicionEstado);
+                            requisicionEstadoFinal.Cancelada();
+                            CambioFinalEstado(requisicionEstadoFinal);
+                            
                         }
                         break;
 

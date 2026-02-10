@@ -281,7 +281,7 @@ namespace CapaPresentacion.FormsSolicitudes
                             .ConEstado(requisicionEstado)
                             .Builder();
 
-                        /*LogicaNegocio.InsertarRequisicion(requisicion);*/
+                        LogicaNegocio.InsertarRequisicion(requisicion);
 
                         foreach (DataGridViewRow item in dataViewDetalleItems.Rows)
                         {
@@ -308,7 +308,7 @@ namespace CapaPresentacion.FormsSolicitudes
                                 .ConItem(items)
                                 .Builder();
 
-                            /*LogicaNegocio.InsertarDetalleRequisicion(detalle);*/
+                            LogicaNegocio.InsertarDetalleRequisicion(detalle);
 
                             MessageBox.Show($"{detalle.Requisicion.IdRequisicion}\n{detalle.Productos.IdProducto}\n" +
                             $"{detalle.Productos.Producto}\n{detalle.Productos.Precio}\n" +

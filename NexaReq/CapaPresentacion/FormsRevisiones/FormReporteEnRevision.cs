@@ -20,6 +20,7 @@ namespace CapaPresentacion.FormsRevisiones
         public FormReporteEnRevision()
         {
             InitializeComponent();
+            //Load += (s, e) => CargarComponentes();
             Load += (s, e) => CargarRequisiciones();
         }
         private void CargarRequisiciones()
@@ -27,6 +28,13 @@ namespace CapaPresentacion.FormsRevisiones
             dataView.DataSource = LogicaNegocio.TablaRequisiciones();
             dataView.CellDoubleClick += DoubleClick;
         }
+
+        private void CargarComponentes()
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.StartPosition = FormStartPosition.CenterParent;
+        }
+
 
         private void DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
