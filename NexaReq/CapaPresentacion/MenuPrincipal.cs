@@ -100,7 +100,7 @@ namespace CapaPresentacion
 
         private void BuReportesPendientes_Click(object sender, EventArgs e)
         {
-            OpenForms(new FormReporteEnRevision());
+            OpenForms(new FormReporteEnRevision(null));
         }
     }
 }

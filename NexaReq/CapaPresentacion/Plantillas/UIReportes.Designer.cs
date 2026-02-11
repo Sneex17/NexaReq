@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             panelContext = new Panel();
+            cbxCamposDeBuscar = new ComboBox();
+            label2 = new Label();
+            textbFiltro = new TextBox();
+            BuGeneralReportes = new Button();
             BuCerrarVentana = new Button();
             dataView = new DataGridView();
             panelHeader = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            BuGeneralReportes = new Button();
             panelContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataView).BeginInit();
             panelHeader.SuspendLayout();
@@ -44,6 +47,9 @@
             // panelContext
             // 
             panelContext.BackColor = Color.White;
+            panelContext.Controls.Add(cbxCamposDeBuscar);
+            panelContext.Controls.Add(label2);
+            panelContext.Controls.Add(textbFiltro);
             panelContext.Controls.Add(BuGeneralReportes);
             panelContext.Controls.Add(BuCerrarVentana);
             panelContext.Controls.Add(dataView);
@@ -52,6 +58,49 @@
             panelContext.Name = "panelContext";
             panelContext.Size = new Size(874, 561);
             panelContext.TabIndex = 3;
+            // 
+            // cbxCamposDeBuscar
+            // 
+            cbxCamposDeBuscar.Font = new Font("Segoe UI", 10F);
+            cbxCamposDeBuscar.FormattingEnabled = true;
+            cbxCamposDeBuscar.Location = new Point(532, 40);
+            cbxCamposDeBuscar.Name = "cbxCamposDeBuscar";
+            cbxCamposDeBuscar.Size = new Size(165, 25);
+            cbxCamposDeBuscar.TabIndex = 11;
+            cbxCamposDeBuscar.Text = "Seleccione un campo";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(16, 40, 99);
+            label2.Location = new Point(41, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 31);
+            label2.TabIndex = 2;
+            label2.Text = "Buscar ";
+            // 
+            // textbFiltro
+            // 
+            textbFiltro.BorderStyle = BorderStyle.FixedSingle;
+            textbFiltro.Location = new Point(138, 41);
+            textbFiltro.Name = "textbFiltro";
+            textbFiltro.Size = new Size(388, 23);
+            textbFiltro.TabIndex = 10;
+            // 
+            // BuGeneralReportes
+            // 
+            BuGeneralReportes.BackColor = Color.FromArgb(16, 40, 99);
+            BuGeneralReportes.Cursor = Cursors.Hand;
+            BuGeneralReportes.FlatStyle = FlatStyle.Popup;
+            BuGeneralReportes.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
+            BuGeneralReportes.ForeColor = Color.White;
+            BuGeneralReportes.Location = new Point(680, 512);
+            BuGeneralReportes.Name = "BuGeneralReportes";
+            BuGeneralReportes.Size = new Size(154, 47);
+            BuGeneralReportes.TabIndex = 9;
+            BuGeneralReportes.Text = "General reporte";
+            BuGeneralReportes.UseVisualStyleBackColor = false;
             // 
             // BuCerrarVentana
             // 
@@ -109,20 +158,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // BuGeneralReportes
-            // 
-            BuGeneralReportes.BackColor = Color.FromArgb(16, 40, 99);
-            BuGeneralReportes.Cursor = Cursors.Hand;
-            BuGeneralReportes.FlatStyle = FlatStyle.Popup;
-            BuGeneralReportes.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            BuGeneralReportes.ForeColor = Color.White;
-            BuGeneralReportes.Location = new Point(680, 512);
-            BuGeneralReportes.Name = "BuGeneralReportes";
-            BuGeneralReportes.Size = new Size(154, 47);
-            BuGeneralReportes.TabIndex = 9;
-            BuGeneralReportes.Text = "General reporte";
-            BuGeneralReportes.UseVisualStyleBackColor = false;
-            // 
             // UIReportes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +171,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UIReportes";
             panelContext.ResumeLayout(false);
+            panelContext.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataView).EndInit();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
@@ -152,5 +188,8 @@
         public DataGridView dataView;
         public Button BuCerrarVentana;
         public Button BuGeneralReportes;
+        public Label label2;
+        public ComboBox cbxCamposDeBuscar;
+        public TextBox textbFiltro;
     }
 }

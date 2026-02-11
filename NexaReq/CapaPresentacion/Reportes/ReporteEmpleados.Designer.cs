@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteEmpleados));
+            panelContext.SuspendLayout();
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -45,8 +46,12 @@
             // 
             // label1
             // 
-            label1.Size = new Size(127, 31);
+            label1.Size = new Size(130, 31);
             label1.Text = "Empleados";
+            // 
+            // cbxCamposDeBuscar
+            // 
+            cbxCamposDeBuscar.Text = "Seleccione un campo";
             // 
             // ReporteEmpleados
             // 
@@ -58,6 +63,8 @@
             MinimumSize = new Size(890, 661);
             Name = "ReporteEmpleados";
             Text = "NexaReq - Empleados";
+            panelContext.ResumeLayout(false);
+            panelContext.PerformLayout();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

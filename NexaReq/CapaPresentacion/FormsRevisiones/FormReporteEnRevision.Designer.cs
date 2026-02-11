@@ -50,6 +50,14 @@
             // 
             BuCerrarVentana.Click += BuCerrarVentana_Click;
             // 
+            // BuGeneralReportes
+            // 
+            BuGeneralReportes.Click += BuGeneralReportes_Click;
+            // 
+            // cbxCamposDeBuscar
+            // 
+            cbxCamposDeBuscar.Size = new Size(165, 25);
+            // 
             // FormReporteEnRevision
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -60,6 +68,7 @@
             Name = "FormReporteEnRevision";
             Text = "FormReporteEnRevision";
             panelContext.ResumeLayout(false);
+            panelContext.PerformLayout();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

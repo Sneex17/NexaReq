@@ -39,7 +39,7 @@ namespace CapaPresentacion.FormsRevisiones
         private void BuBuscarRequisicion_Click(object sender, EventArgs e)
         {
             DataRow[] encontral = new DataRow[0];
-            FormReporteEnRevision reporteEnRevision = new FormReporteEnRevision();
+            FormReporteEnRevision reporteEnRevision = new FormReporteEnRevision(1);
             reporteEnRevision.SelecionarRequisicion += (requisicion) =>
             {
                 encontral = LogicaNegocio.TablaRequisiciones()
@@ -96,13 +96,11 @@ namespace CapaPresentacion.FormsRevisiones
             }
             catch (ControlExcepciones errores)
             {
-
                 MessageBox.Show($"{errores.Message}", "Error de busqueda",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception errores)
             {
-
                 MessageBox.Show($"{errores.Message}", "Errror al realizar la operacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -138,41 +136,35 @@ namespace CapaPresentacion.FormsRevisiones
                     case "Aprobada":
                         {
                             requisicionEstadoFinal.Aprobada();
-                            CambioFinalEstado(requisicionEstadoFinal);
-                            
+                            CambioFinalEstado(requisicionEstadoFinal);    
                         }
                         break;
 
                     case "Rechazada":
                         {
                             requisicionEstadoFinal.Rechazada();
-                            CambioFinalEstado(requisicionEstadoFinal);
-                            
+                            CambioFinalEstado(requisicionEstadoFinal);   
                         }
                         break;
 
                     case "Cancelada":
                         {
                             requisicionEstadoFinal.Cancelada();
-                            CambioFinalEstado(requisicionEstadoFinal);
-                            
+                            CambioFinalEstado(requisicionEstadoFinal); 
                         }
                         break;
 
                     default:
                         break;
-
                 }
             }
             catch (ControlExcepciones errores)
             {
-
                 MessageBox.Show($"{errores.Message}", "Errror al realizar la operacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception errores)
             {
-
                 MessageBox.Show($"{errores.Message}", "Errror al realizar la operacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
