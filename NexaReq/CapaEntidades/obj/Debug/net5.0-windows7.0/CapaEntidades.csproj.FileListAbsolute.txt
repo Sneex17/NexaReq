@@ -1,0 +1,4 @@
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net5.0-windows7.0\CapaEntidades.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net5.0-windows7.0\CapaEntidades.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net5.0-windows7.0\CapaEntidades.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net5.0-windows7.0\CapaEntidades.csproj.CoreCompileInputs.cache

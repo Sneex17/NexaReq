@@ -1,0 +1,17 @@
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaNegocio.deps.json
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaNegocio.dll
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaNegocio.pdb
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaAccesoDatos.dll
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaEntidades.dll
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaAccesoDatos.pdb
+S:\xrami\Downloads\NexaReq\CapaNegocio\bin\Debug\net9.0-windows7.0\CapaEntidades.pdb
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.csproj.AssemblyReference.cache
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.csproj.CoreCompileInputs.cache
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNego.81B9D119.Up2Date
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.dll
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\refint\CapaNegocio.dll
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\CapaNegocio.pdb
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net9.0-windows7.0\ref\CapaNegocio.dll

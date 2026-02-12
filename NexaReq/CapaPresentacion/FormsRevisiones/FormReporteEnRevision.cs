@@ -2,9 +2,6 @@
 using CapaEntidades.BuilderPattern.Requisiciones;
 using CapaNegocio;
 using CapaPresentacion.Plantillas;
-using FastReport;
-using FastReport.Data;
-using FastReport.Preview;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

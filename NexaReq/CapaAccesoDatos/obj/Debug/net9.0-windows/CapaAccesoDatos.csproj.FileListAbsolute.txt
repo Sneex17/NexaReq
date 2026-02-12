@@ -1,0 +1,15 @@
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\bin\Debug\net9.0-windows\CapaAccesoDatos.deps.json
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\bin\Debug\net9.0-windows\CapaAccesoDatos.dll
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\bin\Debug\net9.0-windows\CapaAccesoDatos.pdb
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\bin\Debug\net9.0-windows\CapaEntidades.dll
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\bin\Debug\net9.0-windows\CapaEntidades.pdb
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.csproj.AssemblyReference.cache
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAcce.1AD5E18C.Up2Date
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.dll
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\refint\CapaAccesoDatos.dll
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\CapaAccesoDatos.pdb
+S:\xrami\Downloads\NexaReq\CapaAccesoDatos\obj\Debug\net9.0-windows\ref\CapaAccesoDatos.dll

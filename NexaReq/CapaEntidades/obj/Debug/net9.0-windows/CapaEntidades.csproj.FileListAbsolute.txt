@@ -1,0 +1,11 @@
+S:\xrami\Downloads\NexaReq\CapaEntidades\bin\Debug\net9.0-windows\CapaEntidades.deps.json
+S:\xrami\Downloads\NexaReq\CapaEntidades\bin\Debug\net9.0-windows\CapaEntidades.dll
+S:\xrami\Downloads\NexaReq\CapaEntidades\bin\Debug\net9.0-windows\CapaEntidades.pdb
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.csproj.CoreCompileInputs.cache
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.dll
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\refint\CapaEntidades.dll
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\CapaEntidades.pdb
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net9.0-windows\ref\CapaEntidades.dll

@@ -1,0 +1,5 @@
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net48\CapaNegocio.csproj.AssemblyReference.cache
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net48\CapaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net48\CapaNegocio.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net48\CapaNegocio.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaNegocio\obj\Debug\net48\CapaNegocio.csproj.CoreCompileInputs.cache

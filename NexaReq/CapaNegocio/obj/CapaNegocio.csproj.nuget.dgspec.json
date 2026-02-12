@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj": {}
+    "S:\\xrami\\Downloads\\NexaReq\\CapaNegocio\\CapaNegocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj": {
+    "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj",
+        "projectUniqueName": "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj",
         "projectName": "CapaAccesoDatos",
-        "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj",
+        "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj",
         "packagesPath": "C:\\Users\\xrami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\obj\\",
+        "outputPath": "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,18 +22,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net9.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows7.0",
             "projectReferences": {
-              "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj"
+              "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
+                "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj"
               }
             }
           }
@@ -51,8 +51,8 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows7.0",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
+    "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj",
+        "projectUniqueName": "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj",
         "projectName": "CapaEntidades",
-        "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj",
+        "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj",
         "packagesPath": "C:\\Users\\xrami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\obj\\",
+        "outputPath": "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,15 +97,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net9.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows7.0",
             "projectReferences": {}
           }
         },
@@ -122,8 +122,8 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows7.0",
           "imports": [
             "net461",
             "net462",
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj": {
+    "S:\\xrami\\Downloads\\NexaReq\\CapaNegocio\\CapaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj",
+        "projectUniqueName": "S:\\xrami\\Downloads\\NexaReq\\CapaNegocio\\CapaNegocio.csproj",
         "projectName": "CapaNegocio",
-        "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\CapaNegocio.csproj",
+        "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaNegocio\\CapaNegocio.csproj",
         "packagesPath": "C:\\Users\\xrami\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaNegocio\\obj\\",
+        "outputPath": "S:\\xrami\\Downloads\\NexaReq\\CapaNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -162,21 +162,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net9.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows7.0",
             "projectReferences": {
-              "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj": {
-                "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj"
+              "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj": {
+                "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaAccesoDatos\\CapaAccesoDatos.csproj"
               },
-              "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaEntidades\\CapaEntidades.csproj"
+              "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj": {
+                "projectPath": "S:\\xrami\\Downloads\\NexaReq\\CapaEntidades\\CapaEntidades.csproj"
               }
             }
           }
@@ -194,8 +194,8 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows7.0",
           "imports": [
             "net461",
             "net462",

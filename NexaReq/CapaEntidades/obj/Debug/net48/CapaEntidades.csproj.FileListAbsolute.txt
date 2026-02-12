@@ -1,0 +1,5 @@
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net48\CapaEntidades.csproj.AssemblyReference.cache
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net48\CapaEntidades.GeneratedMSBuildEditorConfig.editorconfig
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net48\CapaEntidades.AssemblyInfoInputs.cache
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net48\CapaEntidades.AssemblyInfo.cs
+S:\xrami\Downloads\NexaReq\CapaEntidades\obj\Debug\net48\CapaEntidades.csproj.CoreCompileInputs.cache

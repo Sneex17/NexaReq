@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaPresentacion.Plantillas;
+using CapaPresentacion.ReportesG;
 
 namespace CapaPresentacion.FormsSolicitudes
 {
@@ -28,6 +29,12 @@ namespace CapaPresentacion.FormsSolicitudes
         private void BuCerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BuGeneralReportes_Click(object sender, EventArgs e)
+        {
+            ReportesGenerales reportes = new ReportesGenerales();
+            reportes.ShowDialog();
         }
     }
 }

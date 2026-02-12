@@ -25,6 +25,9 @@
     <Compile Update="Plantillas\UIReportes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ReportesG\ReportesGenerales.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Reportes\ReporteEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
