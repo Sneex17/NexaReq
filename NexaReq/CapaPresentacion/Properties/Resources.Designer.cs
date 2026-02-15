@@ -103,9 +103,29 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Manager {
+            get {
+                object obj = ResourceManager.GetObject("Manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PasswordIcon {
             get {
                 object obj = ResourceManager.GetObject("PasswordIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product {
+            get {
+                object obj = ResourceManager.GetObject("Product", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

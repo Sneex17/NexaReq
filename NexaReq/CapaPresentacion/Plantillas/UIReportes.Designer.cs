@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panelContext = new Panel();
             cbxCamposDeBuscar = new ComboBox();
             label2 = new Label();
@@ -120,6 +121,15 @@
             // 
             dataView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataView.BackgroundColor = Color.Gainsboro;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.LightSteelBlue;
+            dataGridViewCellStyle1.Font = new Font("Montserrat SemiBold", 8F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataView.Location = new Point(41, 83);
             dataView.Margin = new Padding(3, 2, 3, 2);
@@ -152,9 +162,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(41, 8);
+            pictureBox1.Location = new Point(72, 23);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(66, 50);
+            pictureBox1.Size = new Size(35, 35);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 

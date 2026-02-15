@@ -294,6 +294,7 @@
             textbCantidad.Size = new Size(91, 27);
             textbCantidad.TabIndex = 10;
             textbCantidad.TextChanged += textbCantidad_TextChanged;
+            textbCantidad.KeyPress += textbCantidad_KeyPress;
             // 
             // label9
             // 

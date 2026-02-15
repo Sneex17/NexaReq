@@ -49,9 +49,15 @@
             label1.Size = new Size(130, 31);
             label1.Text = "Empleados";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Manager;
+            pictureBox1.Location = new Point(72, 23);
+            pictureBox1.Size = new Size(35, 35);
+            // 
             // cbxCamposDeBuscar
             // 
-            cbxCamposDeBuscar.Text = "Seleccione un campo";
+            cbxCamposDeBuscar.Size = new Size(165, 25);
             // 
             // ReporteEmpleados
             // 

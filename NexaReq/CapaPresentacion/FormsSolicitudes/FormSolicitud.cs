@@ -12,6 +12,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,7 +65,7 @@ namespace CapaPresentacion.FormsSolicitudes
                 MessageBox.Show($"{errores.Message}", "Error de sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void BuBuscarProducto_Click(object sender, EventArgs e)
@@ -98,7 +99,7 @@ namespace CapaPresentacion.FormsSolicitudes
             {
                 MessageBox.Show($"{errores.Message}", "Error de sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+            }
         }
 
         private void textbCantidad_TextChanged(object sender, EventArgs e)
@@ -107,8 +108,10 @@ namespace CapaPresentacion.FormsSolicitudes
             {
                 if (textbCantidad.Text == "0")
                 {
+                    textbCantidad.Text = string.Empty;
                     throw new ControlExcepciones("La cantidad debe ser mayor que 0");
                 }
+
                 if (string.IsNullOrWhiteSpace(textbCantidad.Text))
                 {
                     textbPrecioUnit.Text = precioUnito;
@@ -176,7 +179,7 @@ namespace CapaPresentacion.FormsSolicitudes
                 MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
         private void AgregarItems()
         {
@@ -198,7 +201,7 @@ namespace CapaPresentacion.FormsSolicitudes
             {
                 MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+            }
         }
         private void LimpiarCampos()
         {
@@ -233,14 +236,32 @@ namespace CapaPresentacion.FormsSolicitudes
 
         private void ControlITBIS(IStrategyItbis strategy)
         {
-            strategyContext.SelecionarItbis(strategy);
-            textbITBIS.Text = Convert.ToString(
-                strategyContext.ObtenerItbis(Convert.ToDecimal(precioUnito)));
-            BuAplicarItbis.Enabled = false;
-            textbSubTotal.Text = Convert.ToString(
-                Convert.ToDecimal(textbPrecioUnit.Text) +
-                Convert.ToDecimal(textbITBIS.Text));
-            precioSubtotal = textbSubTotal.Text;
+            try
+            {
+                if(string.IsNullOrWhiteSpace(textbIdProducto.Text))
+                {
+                    throw new ControlExcepciones("Debe seleccionar un producto primero antes de aplicar el ITBIS");
+                }
+                strategyContext.SelecionarItbis(strategy);
+                textbITBIS.Text = Convert.ToString(
+                    strategyContext.ObtenerItbis(Convert.ToDecimal(precioUnito)));
+                BuAplicarItbis.Enabled = false;
+                textbSubTotal.Text = Convert.ToString(
+                    Convert.ToDecimal(textbPrecioUnit.Text) +
+                    Convert.ToDecimal(textbITBIS.Text));
+                precioSubtotal = textbSubTotal.Text;
+            }
+            catch (ControlExcepciones errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Error al realizar la operación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Error al realizar la operación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         private void BuAplicarItbis_Click(object sender, EventArgs e)
         {
@@ -443,7 +464,30 @@ namespace CapaPresentacion.FormsSolicitudes
             {
                 MessageBox.Show($"{errores.Message}", "Cantidad no valida",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+            }
+        }
+
+        private void textbCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = true;
+                    throw new ControlExcepciones("Solo numeros en la cantidad");
+                }
+            }
+            catch (ControlExcepciones errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Error al realizar la operación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

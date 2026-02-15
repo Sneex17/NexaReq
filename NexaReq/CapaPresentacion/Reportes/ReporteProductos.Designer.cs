@@ -47,8 +47,13 @@
             label1.Size = new Size(241, 31);
             label1.Text = "Productos / Servicios";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Product;
+            // 
             // cbxCamposDeBuscar
             // 
+            cbxCamposDeBuscar.Size = new Size(165, 25);
             cbxCamposDeBuscar.Text = "Selecione un campo";
             // 
             // ReporteProductos

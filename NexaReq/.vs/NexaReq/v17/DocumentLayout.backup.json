@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\reportes\\reporteempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\reporteempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\formssolicitudes\\formsreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\formssolicitudes\\formsreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\reportes\\reporteempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\reporteempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\reporteproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\reportes\\reporterequisicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\reporterequisicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capapresentacion\\plantillas\\uireportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\plantillas\\uireportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\capapresentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CAD8D3C6-9C45-4ED7-8794-0D6DF310022E}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FED89C8-F4C3-4179-A982-14136BC6B0A2}|CapaAccesoDatos\\CapaAccesoDatos.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\nexareq\\capaaccesodatos\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\MenuPrincipal.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\MenuPrincipal.cs",
@@ -59,68 +63,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReporteEmpleados.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "RelativeToolTip": "CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwD0AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FormSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "RelativeToolTip": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAuwBYBAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T20:25:34.154Z",
+              "WhenOpened": "2026-02-15T22:17:33.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormSolicitud.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\FormsSolicitudes\\FormSolicitud.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T22:17:23.951Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReporteProductos.cs",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "RelativeToolTip": "CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T22:16:08.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ReporteEmpleados.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\ReporteEmpleados.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteEmpleados.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Reportes\\ReporteEmpleados.cs [Dise\u00F1o]",
+              "Title": "ReporteProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\ReporteProductos.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Reportes\\ReporteProductos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T20:25:29.867Z",
+              "WhenOpened": "2026-02-15T22:16:05.949Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormsReportes.cs",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "RelativeToolTip": "CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA1wFEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ReporteRequisicion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteRequisicion.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\ReporteRequisicion.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Reportes\\ReporteRequisicion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Reportes\\ReporteRequisicion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T20:24:54.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormsReportes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\FormsSolicitudes\\FormsReportes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T20:24:50.528Z",
+              "WhenOpened": "2026-02-15T22:16:02.424Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Login.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Login.cs",
-              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Login.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Login.cs [Dise\u00F1o]",
+              "Title": "UIReportes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Plantillas\\UIReportes.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Plantillas\\UIReportes.cs",
+              "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\Plantillas\\UIReportes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Plantillas\\UIReportes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T19:35:41.794Z"
+              "WhenOpened": "2026-02-15T22:01:28.966Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ConexionBD.cs",
               "DocumentMoniker": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaAccesoDatos\\ConexionBD.cs",
               "RelativeDocumentMoniker": "CapaAccesoDatos\\ConexionBD.cs",

@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\ReportesG\\ra\\ReportesG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\ReportesG\\ra\\ReportesG\\reporterequisiciona.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\reportesg\\ra\\reportesg\\reporterequisiciona.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|solutionrelative:reporterequisiciona.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|solutionrelative:reportesrequisiciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|c:\\users\\xrami\\onedrive\\escritorio\\nexareq\\reportesg\\ra\\reportesg\\reportesrequisiciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\ReportesG\\ra\\ReportesG\\reportesrequisiciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71A6A2D1-E30A-4235-B8BD-C69C04002B27}|ReportesG.csproj|solutionrelative:reportesrequisiciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,8 +38,7 @@
               "RelativeToolTip": "ReportesRequisiciones.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAuwC8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T17:50:29.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T17:50:29.883Z"
             },
             {
               "$type": "Document",
@@ -62,8 +61,7 @@
               "ToolTip": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\ReportesG\\ra\\ReportesG\\ReportesRequisiciones.cs [Dise\u00F1o]",
               "RelativeToolTip": "ReportesRequisiciones.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T17:24:03.84Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-02-13T17:24:03.84Z"
             }
           ]
         }
