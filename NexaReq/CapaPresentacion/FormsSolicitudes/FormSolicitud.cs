@@ -136,27 +136,9 @@ namespace CapaPresentacion.FormsSolicitudes
 
         private void BuAgregar_Click(object sender, EventArgs e)
         {
-            if (Items.listaProducto.Count == 0)
+            try
             {
-                AgregarItems();
-                AgregarListaItems();
-                CalcularTotal();
-            }
-            else
-            {
-                int idProducto = Convert.ToInt32(textbIdProducto.Text);
-                int NewCantidad = Convert.ToInt32(textbCantidad.Text);
-                decimal NewPreciocantidad = LogicaNegocio.Preciocantidad(
-                        Convert.ToDecimal(textbPrecioUnit.Text), Convert.ToInt32(textbCantidad.Text));
-                decimal NewITBIS = Convert.ToDecimal(textbITBIS.Text);
-                string SubTotal = LogicaNegocio.PrecioPorCantidad(
-                    Convert.ToDecimal(textbPrecioUnit.Text), NewITBIS, NewCantidad);
-                decimal NewSubTotal = Convert.ToDecimal(SubTotal);
-
-                var resultado = LogicaNegocio.AgregarMasCanntidadProducto(idProducto, NewCantidad,
-                    NewPreciocantidad, NewITBIS, NewSubTotal);
-
-                if (!resultado)
+                if (Items.listaProducto.Count == 0)
                 {
                     AgregarItems();
                     AgregarListaItems();
@@ -164,24 +146,59 @@ namespace CapaPresentacion.FormsSolicitudes
                 }
                 else
                 {
-                    AgregarListaItems();
-                    CalcularTotal();
+                    int idProducto = Convert.ToInt32(textbIdProducto.Text);
+                    int NewCantidad = Convert.ToInt32(textbCantidad.Text);
+                    decimal NewPreciocantidad = LogicaNegocio.Preciocantidad(
+                            Convert.ToDecimal(textbPrecioUnit.Text), Convert.ToInt32(textbCantidad.Text));
+                    decimal NewITBIS = Convert.ToDecimal(textbITBIS.Text);
+                    string SubTotal = LogicaNegocio.PrecioPorCantidad(
+                        Convert.ToDecimal(textbPrecioUnit.Text), NewITBIS, NewCantidad);
+                    decimal NewSubTotal = Convert.ToDecimal(SubTotal);
+
+                    var resultado = LogicaNegocio.AgregarMasCanntidadProducto(idProducto, NewCantidad,
+                        NewPreciocantidad, NewITBIS, NewSubTotal);
+
+                    if (!resultado)
+                    {
+                        AgregarItems();
+                        AgregarListaItems();
+                        CalcularTotal();
+                    }
+                    else
+                    {
+                        AgregarListaItems();
+                        CalcularTotal();
+                    }
                 }
             }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         private void AgregarItems()
         {
-            Items.listaProducto.Add(new Items
+            try
             {
-                IdProducto = Convert.ToInt32(textbIdProducto.Text),
-                Producto = textbProducto.Text,
-                Precio = Convert.ToDecimal(textbPrecioUnit.Text),
-                Cantidad = Convert.ToInt32(textbCantidad.Text),
-                PrecioCantidad = LogicaNegocio.Preciocantidad(
+                Items.listaProducto.Add(new Items
+                {
+                    IdProducto = Convert.ToInt32(textbIdProducto.Text),
+                    Producto = textbProducto.Text,
+                    Precio = Convert.ToDecimal(textbPrecioUnit.Text),
+                    Cantidad = Convert.ToInt32(textbCantidad.Text),
+                    PrecioCantidad = LogicaNegocio.Preciocantidad(
                         Convert.ToDecimal(textbPrecioUnit.Text), Convert.ToInt32(textbCantidad.Text)),
-                ITBIS = Convert.ToDecimal(textbITBIS.Text),
-                SubTotal = Convert.ToDecimal(textbSubTotal.Text)
-            });
+                    ITBIS = Convert.ToDecimal(textbITBIS.Text),
+                    SubTotal = Convert.ToDecimal(textbSubTotal.Text)
+                });
+            }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
         }
         private void LimpiarCampos()
         {
@@ -392,35 +409,41 @@ namespace CapaPresentacion.FormsSolicitudes
 
         private void dataViewDetalleItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            decimal total = 0;
-            if (e.RowIndex < 0 || e.ColumnIndex != dataViewDetalleItems.Columns["Opcion"].Index)
-                return;
-
-            dataViewDetalleItems.Rows.RemoveAt(e.RowIndex);
-
-            Items.listaProducto.Clear();
-
-            foreach (DataGridViewRow item in dataViewDetalleItems.Rows)
+            try
             {
-                if (item.IsNewRow)
-                    continue;
-                Items.listaProducto.Add(new Items
+                decimal total = 0;
+                if (e.RowIndex < 0 || e.ColumnIndex != dataViewDetalleItems.Columns["Opcion"].Index)
+                    return;
+
+                dataViewDetalleItems.Rows.RemoveAt(e.RowIndex);
+
+                Items.listaProducto.Clear();
+
+                foreach (DataGridViewRow item in dataViewDetalleItems.Rows)
                 {
-                    IdProducto = Convert.ToInt32(item.Cells[0].Value.ToString()),
-                    Producto = item.Cells[1].Value.ToString(),
-                    Precio = Convert.ToDecimal(item.Cells[2].Value.ToString()),
-                    Cantidad = Convert.ToInt32(item.Cells[3].Value.ToString()),
-                    PrecioCantidad = 
-                        Convert.ToDecimal(item.Cells[4].Value.ToString()),
-                    ITBIS = Convert.ToDecimal(item.Cells[5].Value.ToString()),
-                    SubTotal = Convert.ToDecimal(item.Cells[6].Value.ToString())
-                });
+                    if (item.IsNewRow)
+                        continue;
+                    Items.listaProducto.Add(new Items
+                    {
+                        IdProducto = Convert.ToInt32(item.Cells[0].Value.ToString()),
+                        Producto = item.Cells[1].Value.ToString(),
+                        Precio = Convert.ToDecimal(item.Cells[2].Value.ToString()),
+                        Cantidad = Convert.ToInt32(item.Cells[3].Value.ToString()),
+                        PrecioCantidad =
+                            Convert.ToDecimal(item.Cells[4].Value.ToString()),
+                        ITBIS = Convert.ToDecimal(item.Cells[5].Value.ToString()),
+                        SubTotal = Convert.ToDecimal(item.Cells[6].Value.ToString())
+                    });
 
-                textbTotal.Text = Convert.ToString(
-                    total += Convert.ToDecimal(item.Cells[6].Value.ToString()));
+                    textbTotal.Text = Convert.ToString(
+                        total += Convert.ToDecimal(item.Cells[6].Value.ToString()));
+                }
             }
-
-
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Cantidad no valida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
         }
     }
 }
