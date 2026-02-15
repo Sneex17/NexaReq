@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iF0iZKZKm50=",
+  "dgSpecHash": "YZUAEjueUAU=",
   "success": true,
-  "projectFilePath": "S:\\xrami\\Downloads\\NexaReq\\CapaPresentacion\\CapaPresentacion.csproj",
+  "projectFilePath": "C:\\Users\\xrami\\OneDrive\\Escritorio\\NexaReq\\NexaReq\\CapaPresentacion\\CapaPresentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xrami\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\xrami\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",

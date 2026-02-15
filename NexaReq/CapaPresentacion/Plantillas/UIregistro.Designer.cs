@@ -100,7 +100,6 @@
             Controls.Add(panelContext);
             Controls.Add(panelHeader);
             FormBorderStyle = FormBorderStyle.None;
-            MaximumSize = new Size(890, 661);
             MinimumSize = new Size(890, 661);
             Name = "UIregistro";
             Text = "UIregistro";

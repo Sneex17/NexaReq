@@ -8,6 +8,7 @@ namespace CapaEntidades.EntidadesA
 {
     public class Usuarios
     {
+        public static List<Usuarios> ListaUsuarios = new List<Usuarios>();
         public int IdUsuario { get; set; }
         public int IdEmpleado { get; set; }
         public string Username { get; set; }

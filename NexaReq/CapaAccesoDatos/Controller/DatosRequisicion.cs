@@ -63,5 +63,17 @@ namespace CapaAccesoDatos.Controller
                 resultado = comando.ExecuteNonQuery();
             }
         }
+
+        public static void ReporteRequisicion(string idRequisicion)
+        {
+            using (SqlConnection acceso = ConexionBD.Instancia.ObtenerConexion())
+            {
+                int resultado;
+                SqlCommand comando = new SqlCommand("pa_Reporte", acceso);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@IdRequisicion", idRequisicion);
+                resultado = comando.ExecuteNonQuery();
+            }
+        }
     }
 }

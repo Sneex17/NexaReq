@@ -32,6 +32,26 @@ namespace CapaAccesoDatos.Controller
                 }
             }
         }
+
+
+        public static int UsuarioActual(Usuarios usuarios)
+        {
+            using (SqlConnection acceso = ConexionBD.Instancia.ObtenerConexion())
+            {
+                int IdRol = 0;
+                SqlCommand comando = new SqlCommand("pa_UsuarioActual", acceso);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Username", usuarios.Username);
+                comando.Parameters.AddWithValue("@PasswordHash", usuarios.PasswordHash);
+                SqlDataReader reader = comando.ExecuteReader();
+                while(reader.Read())
+                {
+                    IdRol = (int)reader.GetInt32(4);
+                }
+                reader.Close();
+                return IdRol;
+            }
+        }
     }
 
 }

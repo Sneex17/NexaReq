@@ -9,17 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.FormsSolicitudes;
 using CapaPresentacion.FormsRevisiones;
+using CapaEntidades.EntidadesA;
+using System.Security.AccessControl;
+using Microsoft.CodeAnalysis.VisualBasic;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+
+        public MenuPrincipal(Usuarios usuarios)
         {
             InitializeComponent();
             SubmenuOff();
+            LbUsuario.Text = usuarios.Username;
+            Mensaje(LbUsuario.Text);
+            ControlRoles(usuarios);
         }
 
+        private async Task Mensaje(string usuario)
+        {
+            await Task.Delay(500);
+            MessageBox.Show($"Bienvenod@ {usuario} a NexaReq", "Bienvenida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void SubmenuOff()
         {
             panelSmSolicitudes.Visible = false;
@@ -43,6 +57,30 @@ namespace CapaPresentacion
             }
         }
 
+
+        private void ControlRoles(Usuarios usuarios)
+        {
+            int rol = LogicaNegocio.Usuario(usuarios);
+
+
+            switch (rol)
+            {
+                case 1:
+                    {
+                        BuRequisiciones.Visible = false;
+                    }
+                    break;
+
+                case 2:
+                    {
+                        BuSolicitudes.Visible = false;
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
         /// <summary>
         /// Variable para los formularios hijos
         /// </summary>

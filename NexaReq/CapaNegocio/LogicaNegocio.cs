@@ -19,7 +19,6 @@ namespace CapaNegocio
         {
             usuarios.PasswordHash = PasswordSHA256.GetSha256(usuarios.PasswordHash);
             bool resultado = DatosUsuarios.ValidacionUsuario(usuarios);
-            //UsuariosController.ListaUsuarios(usuarios);
             if (resultado)
             {
                 return true;
@@ -30,6 +29,11 @@ namespace CapaNegocio
             }
         }
 
+        public static int Usuario(Usuarios usuarios)
+        {
+            //usuarios.PasswordHash = PasswordSHA256.GetSha256(usuarios.PasswordHash);
+            return DatosUsuarios.UsuarioActual(usuarios);
+        }
         public static DataTable TablaEmpleados()
         {
             return DatosEmpleados.ListaEmpleados();

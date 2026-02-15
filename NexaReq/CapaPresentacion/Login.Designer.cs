@@ -40,14 +40,20 @@
             textbUsername = new TextBox();
             label1 = new Label();
             errorProviderLogin = new ErrorProvider(components);
+            pictureBoxUser = new PictureBox();
+            pictureBoxPass = new PictureBox();
             panelFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderLogin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxUser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPass).BeginInit();
             SuspendLayout();
             // 
             // panelFondo
             // 
             panelFondo.BackColor = Color.White;
+            panelFondo.Controls.Add(pictureBoxPass);
+            panelFondo.Controls.Add(pictureBoxUser);
             panelFondo.Controls.Add(pictureBox1);
             panelFondo.Controls.Add(label3);
             panelFondo.Controls.Add(textbPassword);
@@ -155,6 +161,26 @@
             // 
             errorProviderLogin.ContainerControl = this;
             // 
+            // pictureBoxUser
+            // 
+            pictureBoxUser.Image = Properties.Resources.UserIcon;
+            pictureBoxUser.Location = new Point(252, 126);
+            pictureBoxUser.Name = "pictureBoxUser";
+            pictureBoxUser.Size = new Size(40, 40);
+            pictureBoxUser.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxUser.TabIndex = 8;
+            pictureBoxUser.TabStop = false;
+            // 
+            // pictureBoxPass
+            // 
+            pictureBoxPass.Image = Properties.Resources.PasswordIcon;
+            pictureBoxPass.Location = new Point(252, 185);
+            pictureBoxPass.Name = "pictureBoxPass";
+            pictureBoxPass.Size = new Size(40, 40);
+            pictureBoxPass.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPass.TabIndex = 9;
+            pictureBoxPass.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,6 +188,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(panelFondo);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NexaReq";
@@ -169,6 +197,8 @@
             panelFondo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProviderLogin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxUser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPass).EndInit();
             ResumeLayout(false);
         }
 
@@ -184,5 +214,7 @@
         private Label label3;
         private ErrorProvider errorProviderLogin;
         private PictureBox pictureBox1;
+        private PictureBox pictureBoxPass;
+        private PictureBox pictureBoxUser;
     }
 }

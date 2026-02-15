@@ -24,5 +24,10 @@ namespace CapaNegocio
         {
             DatosRequisicion.ActualizarRequisicion(requisicion);
         }
+
+        public static void AgregarReporte(string idRequisicion)
+        {
+            DatosRequisicion.ReporteRequisicion(idRequisicion);
+        }
     }
 }

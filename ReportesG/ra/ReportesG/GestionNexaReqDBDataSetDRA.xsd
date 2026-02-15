@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestionNexaReqDBDataSetDRA" targetNamespace="http://tempuri.org/GestionNexaReqDBDataSetDRA.xsd" xmlns:mstns="http://tempuri.org/GestionNexaReqDBDataSetDRA.xsd" xmlns="http://tempuri.org/GestionNexaReqDBDataSetDRA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GestionNexaReqDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GestionNexaReqDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ReportesG.Properties.Settings.GlobalReference.Default.GestionNexaReqDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwDetalleRequisicionAprobadaTableAdapter" GeneratorDataComponentClassName="vwDetalleRequisicionAprobadaTableAdapter" Name="vwDetalleRequisicionAprobada" UserDataComponentName="vwDetalleRequisicionAprobadaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GestionNexaReqDBConnectionString (Settings)" DbObjectName="GestionNexaReqDB.dbo.vwDetalleRequisicionAprobada" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdDetalleRequisicion, IdRequisicion, IdProducto, Producto, Precio, ITBIS, Cantidad, PrecioCantidad, SubTotal FROM dbo.vwDetalleRequisicionAprobada</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdDetalleRequisicion" DataSetColumn="IdDetalleRequisicion" />
+              <Mapping SourceColumn="IdRequisicion" DataSetColumn="IdRequisicion" />
+              <Mapping SourceColumn="IdProducto" DataSetColumn="IdProducto" />
+              <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="ITBIS" DataSetColumn="ITBIS" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="PrecioCantidad" DataSetColumn="PrecioCantidad" />
+              <Mapping SourceColumn="SubTotal" DataSetColumn="SubTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GestionNexaReqDBDataSetDRA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestionNexaReqDBDataSetDRA" msprop:Generator_DataSetName="GestionNexaReqDBDataSetDRA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwDetalleRequisicionAprobada" msprop:Generator_RowEvHandlerName="vwDetalleRequisicionAprobadaRowChangeEventHandler" msprop:Generator_RowDeletedName="vwDetalleRequisicionAprobadaRowDeleted" msprop:Generator_RowDeletingName="vwDetalleRequisicionAprobadaRowDeleting" msprop:Generator_RowEvArgName="vwDetalleRequisicionAprobadaRowChangeEvent" msprop:Generator_TablePropName="vwDetalleRequisicionAprobada" msprop:Generator_RowChangedName="vwDetalleRequisicionAprobadaRowChanged" msprop:Generator_RowChangingName="vwDetalleRequisicionAprobadaRowChanging" msprop:Generator_TableClassName="vwDetalleRequisicionAprobadaDataTable" msprop:Generator_RowClassName="vwDetalleRequisicionAprobadaRow" msprop:Generator_TableVarName="tablevwDetalleRequisicionAprobada" msprop:Generator_UserTableName="vwDetalleRequisicionAprobada">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDetalleRequisicion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="IdDetalleRequisicion" msprop:Generator_ColumnPropNameInTable="IdDetalleRequisicionColumn" msprop:Generator_ColumnVarNameInTable="columnIdDetalleRequisicion" msprop:Generator_UserColumnName="IdDetalleRequisicion" type="xs:int" />
+              <xs:element name="IdRequisicion" msprop:Generator_ColumnPropNameInRow="IdRequisicion" msprop:Generator_ColumnPropNameInTable="IdRequisicionColumn" msprop:Generator_ColumnVarNameInTable="columnIdRequisicion" msprop:Generator_UserColumnName="IdRequisicion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdProducto" msprop:Generator_ColumnPropNameInRow="IdProducto" msprop:Generator_ColumnPropNameInTable="IdProductoColumn" msprop:Generator_ColumnVarNameInTable="columnIdProducto" msprop:Generator_UserColumnName="IdProducto" type="xs:int" />
+              <xs:element name="Producto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_UserColumnName="Producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_UserColumnName="Precio" type="xs:decimal" />
+              <xs:element name="ITBIS" msprop:Generator_ColumnPropNameInRow="ITBIS" msprop:Generator_ColumnPropNameInTable="ITBISColumn" msprop:Generator_ColumnVarNameInTable="columnITBIS" msprop:Generator_UserColumnName="ITBIS" type="xs:decimal" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_UserColumnName="Cantidad" type="xs:int" />
+              <xs:element name="PrecioCantidad" msprop:Generator_ColumnPropNameInRow="PrecioCantidad" msprop:Generator_ColumnPropNameInTable="PrecioCantidadColumn" msprop:Generator_ColumnVarNameInTable="columnPrecioCantidad" msprop:Generator_UserColumnName="PrecioCantidad" type="xs:decimal" />
+              <xs:element name="SubTotal" msprop:Generator_ColumnPropNameInRow="SubTotal" msprop:Generator_ColumnPropNameInTable="SubTotalColumn" msprop:Generator_ColumnVarNameInTable="columnSubTotal" msprop:Generator_UserColumnName="SubTotal" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwDetalleRequisicionAprobada" />
+      <xs:field xpath="mstns:IdDetalleRequisicion" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

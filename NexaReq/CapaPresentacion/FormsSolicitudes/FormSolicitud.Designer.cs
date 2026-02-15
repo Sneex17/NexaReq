@@ -400,6 +400,7 @@
             dataViewDetalleItems.RowHeadersWidth = 51;
             dataViewDetalleItems.Size = new Size(850, 195);
             dataViewDetalleItems.TabIndex = 8;
+            dataViewDetalleItems.CellClick += dataViewDetalleItems_CellClick;
             // 
             // IdProducto
             // 

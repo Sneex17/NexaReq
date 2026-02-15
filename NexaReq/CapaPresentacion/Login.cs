@@ -9,10 +9,15 @@ namespace CapaPresentacion
         public Login()
         {
             InitializeComponent();
-                 
+            Control();
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Control()
         {
             textbPassword.UseSystemPasswordChar = true;
         }
@@ -20,21 +25,26 @@ namespace CapaPresentacion
         {
             try
             {
-                Usuarios usuarios = new Usuarios();
-                usuarios.Username = textbUsername.Text;
-                usuarios.PasswordHash = textbPassword.Text;
-                bool resultado = LogicaNegocio.ValidarUsario(usuarios);
-                if (resultado)
+                if (!string.IsNullOrWhiteSpace(textbUsername.Text) &&
+                        !string.IsNullOrWhiteSpace(textbUsername.Text))
                 {
-                    MenuPrincipal menu = new MenuPrincipal();
-                    menu.Show();
-                    this.Hide();     
+                    Usuarios usuarios = new Usuarios();
+                    usuarios.Username = textbUsername.Text;
+                    usuarios.PasswordHash = textbPassword.Text;
+                    bool resultado = LogicaNegocio.ValidarUsario(usuarios);
+                    if (resultado)
+                    {
+                        MenuPrincipal menu = new MenuPrincipal(usuarios);
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email o Contraseña incorrecta", "Credenciales no validas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Email o Contraseña incorrecta", "Credenciales no validas",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
             catch (Exception ex)
             {

@@ -40,48 +40,65 @@ namespace CapaPresentacion.FormsSolicitudes
         }
         private void BuBuscarEmpleados_Click(object sender, EventArgs e)
         {
-            DataRow[] encontral = new DataRow[0];
-            ReporteEmpleados empleados = new ReporteEmpleados();
-            empleados.SelecionarEmpleado += (empleado) =>
+            try
             {
-                encontral = LogicaNegocio.TablaEmpleados()
-                .Select($"IdEmpleado = '{empleado.IdEmpleado}'");
-            };
-            empleados.ShowDialog();
+                DataRow[] encontral = new DataRow[0];
+                ReporteEmpleados empleados = new ReporteEmpleados();
+                empleados.SelecionarEmpleado += (empleado) =>
+                {
+                    encontral = LogicaNegocio.TablaEmpleados()
+                    .Select($"IdEmpleado = '{empleado.IdEmpleado}'");
+                };
+                empleados.ShowDialog();
 
-            if (encontral.Length > 0)
-            {
-                DataRow empleado = encontral[0];
-                textbIdEmpleado.Text = empleado["IdEmpleado"].ToString();
-                textbNombre.Text = empleado["Nombre"].ToString();
-                textbDepartamento.Text = empleado["Departamento"].ToString();
+                if (encontral.Length > 0)
+                {
+                    DataRow empleado = encontral[0];
+                    textbIdEmpleado.Text = empleado["IdEmpleado"].ToString();
+                    textbNombre.Text = empleado["Nombre"].ToString();
+                    textbDepartamento.Text = empleado["Departamento"].ToString();
+                }
             }
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Error de sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void BuBuscarProducto_Click(object sender, EventArgs e)
         {
-            DataRow[] encontral = new DataRow[0];
-            ReporteProductos productos = new ReporteProductos();
-            productos.SelecionarProducto += (producto) =>
+            try
             {
-                encontral = LogicaNegocio.TablaProductos()
-                .Select($"IdProducto = '{producto.IdProducto}'");
-            };
-            productos.ShowDialog();
+                DataRow[] encontral = new DataRow[0];
+                ReporteProductos productos = new ReporteProductos();
+                productos.SelecionarProducto += (producto) =>
+                {
+                    encontral = LogicaNegocio.TablaProductos()
+                    .Select($"IdProducto = '{producto.IdProducto}'");
+                };
+                productos.ShowDialog();
 
-            if (encontral.Length > 0)
-            {
-                DataRow producto = encontral[0];
-                textbIdProducto.Text = producto["IdProducto"].ToString();
-                textbProducto.Text = producto["Producto"].ToString();
-                textbPrecioUnit.Text = producto["Precio"].ToString();
-                //textbITBIS.Text = producto["ITBIS"].ToString();
-                //textbSubTotal.Text = Convert.ToString(
-                //    Convert.ToDecimal(textbPrecioUnit.Text) +
-                //    Convert.ToDecimal(textbITBIS.Text));
+                if (encontral.Length > 0)
+                {
+                    DataRow producto = encontral[0];
+                    textbIdProducto.Text = producto["IdProducto"].ToString();
+                    textbProducto.Text = producto["Producto"].ToString();
+                    textbPrecioUnit.Text = producto["Precio"].ToString();
+                    //textbITBIS.Text = producto["ITBIS"].ToString();
+                    //textbSubTotal.Text = Convert.ToString(
+                    //    Convert.ToDecimal(textbPrecioUnit.Text) +
+                    //    Convert.ToDecimal(textbITBIS.Text));
+                }
+                precioUnito = textbPrecioUnit.Text;
+                //precioSubtotal = textbSubTotal.Text;
             }
-            precioUnito = textbPrecioUnit.Text;
-            //precioSubtotal = textbSubTotal.Text;
+            catch (Exception errores)
+            {
+                MessageBox.Show($"{errores.Message}", "Error de sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         private void textbCantidad_TextChanged(object sender, EventArgs e)
@@ -371,6 +388,39 @@ namespace CapaPresentacion.FormsSolicitudes
         private void BuCerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataViewDetalleItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal total = 0;
+            if (e.RowIndex < 0 || e.ColumnIndex != dataViewDetalleItems.Columns["Opcion"].Index)
+                return;
+
+            dataViewDetalleItems.Rows.RemoveAt(e.RowIndex);
+
+            Items.listaProducto.Clear();
+
+            foreach (DataGridViewRow item in dataViewDetalleItems.Rows)
+            {
+                if (item.IsNewRow)
+                    continue;
+                Items.listaProducto.Add(new Items
+                {
+                    IdProducto = Convert.ToInt32(item.Cells[0].Value.ToString()),
+                    Producto = item.Cells[1].Value.ToString(),
+                    Precio = Convert.ToDecimal(item.Cells[2].Value.ToString()),
+                    Cantidad = Convert.ToInt32(item.Cells[3].Value.ToString()),
+                    PrecioCantidad = 
+                        Convert.ToDecimal(item.Cells[4].Value.ToString()),
+                    ITBIS = Convert.ToDecimal(item.Cells[5].Value.ToString()),
+                    SubTotal = Convert.ToDecimal(item.Cells[6].Value.ToString())
+                });
+
+                textbTotal.Text = Convert.ToString(
+                    total += Convert.ToDecimal(item.Cells[6].Value.ToString()));
+            }
+
+
         }
     }
 }
